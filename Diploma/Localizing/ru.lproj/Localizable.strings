@@ -1,0 +1,117 @@
+/* 
+  Localizable.strings
+  Industrial
+
+  Created by DmitriiG on 01.02.2023.
+  
+*/
+"alert_title" = "Внимание";
+"don't_press_message" = "Не нажимай эту кнопку";
+"accepted" = "Одобрено";
+"well_done" = "молодец";
+"did't_accepted" = "Не одобрено";
+"undefined" = "Не определено";
+"home" = "Главная";
+"profile" = "Профиль";
+"fileManager" = "ФайлМенеджер";
+"moscow" = "Москва";
+"unknown_status" = "Статус неизвестен";
+"route" = "Маршрут";
+"insert_coordinate" = "Вставьте координаты";
+"latitude" = "Широта";
+"longitude" = "Долгота";
+"error" = "Ошибка";
+"location_can't_be_detected" = "Местоположение не может быть определено";
+"postViewController" = "ПостВьюКонтроллер";
+"password_prompt" = "Пароль начинается на букву 'п'";
+"insert_password" = "Вставьте пароль";
+"check" = "Проверить";
+"password_prompt_descript" = "Зеленый, если угадал, красный, если нет";
+"postButton1" = "ПостКнопка";
+"mapView" = "Карта";
+"feedView" = "ФидВью";
+"secretWord" = "пароль";
+"info" = "Инфо";
+"URL_not_found" = "URL не найден";
+"fetching_in_process" = "в процессе получения данных";
+"save_picture" = "Сохранить картинку";
+"choose_name_picture" = "Выберите имя картинки";
+"insert_filename" = "Вставьте имя файла";
+"save" = "Сохранить";
+"cancel" = "Отменить";
+"name_exist" = "Такое имя уже существует";
+"settings" = "Настройки";
+"directory" = "Папка";
+"add_photo" = "Добавить фото";
+"create_password" = "Создать пароль";
+"length_ not_less_4_symbols" = "Длина пароля не менее 4 символов";
+"insert_login" = "Вставьте логин";
+"login_doesn't_meet_rules" = "Логин или пароль не соответствует правилам";
+"repeat" = "Повторите";
+"already_have_password" = "Уже есть пароль";
+"repeat_password" = "Порвторите пароль";
+"insert_password_again" = "Вставьте пароль снова";
+"passwords_don't_match" = "Пароли не совпадают";
+"change_password" = "Изменить пароль";
+"error_transforming_password" = "Ошибка преобразования пароля";
+"password_added" = "Пароль добавлен";
+"error_adding_password:" = "Ошибка добавления пароля:";
+"error_pair_login/password" = "Пара 'логин/парлоь' не может быть добавлена ";
+"error_receiving_password:" = "Ошибка получения пароля:";
+"error_password_doesn't_exist" = "Пароль не существует";
+"password_incorrect" = "Неверный пароль";
+"password_updated" = "Пароль был обновлен";
+"error_updating_password:" = "Ошибка обновления пароля:";
+"sort" = "Сорртировать";
+"A->Z" = "А->Я";
+"Z->A" = "Я->А";
+"password" = "Пароль";
+"log_in" = "Войти";
+"sign_up" = "Подписаться";
+"random_password" = "Случайный пароль";
+"generate_random_password" = "Сгенерировать случайный пароль";
+"hack_use_random_password" = "Подобрать и использовать случайный пароль";
+"set_your_status" = "Установите Ваш статус";
+"set_status" ="Установить статус";
+"exit" = "Выход";
+"insert_login_password" = "Вставьте логин и пароль";
+"password_login_incorrect" = "Неправильный пароль или логин ";
+"unknown_error" = "Неизвестная ошибка";
+"no_images_in_collection" = "В коллекции нет картинок";
+"post_not_added" = "Пост был добавлен";
+"post_already_contained" = "Избранное уже содержит пост";
+"photos" = "Фото";
+"photo_gallery" = "Фото галлерея";
+"failure_registration" = "Ошибка регистрации";
+"user_existed_something_wrong" = "Пользователь уже существует или что-то не так с логином или паролем";
+"successful_registrarion" = "Успешная регистрация";
+"user_registered" = "Пользователь был успешно зарегистрирован";
+"favorites" = "Избранное";
+"no_posts_favorites" = "В избранном нет постов";
+"search_criteria" = "Условия поиска";
+"apply" = "Применить";
+"search" = "Поиск";
+"data_loading_process" = "идет процесс загрузки данных";
+"build_route" = "Построить маршрут";
+"destination" = "Пункт назначения";
+"destinationInsert" = "Введите адрес";
+"insert_address" = "Введите адрес";
+"authFailed" = "Аутентификация не пройдена";
+"authUnavailable" = "Аутентификация недоступна";
+"authIsNotSetUp" = "Аутентификация не установлена";
+"authCancellded" = "Аутентификация отменена";
+"goingToPassword" = "Переходим к аутентификации по паролю";
+"authIsLocked" = "Аутентификация заблокирована";
+"authCannotConfigured" = "Аутентификация не может быть настроена";
+"verifyIdentity" = "Подтвердите личность";
+"enterPassword" = "Введите пароль от приложения";
+"touchMeNot" = "Не трогать";
+"FaceIDTouchIDnotConfigured" = "Face ID / Touch ID не может быть настроено";
+"success" = "Успех";
+"successAuthentication" = "Успешная аутентификация";
+"look_update" = "Посмотрите последние обновления";
+"update" = "Обновить";
+
+
+
+

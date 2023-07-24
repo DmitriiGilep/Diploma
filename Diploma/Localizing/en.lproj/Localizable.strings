@@ -1,0 +1,137 @@
+/* 
+  Localizable.strings
+  Industrial
+
+  Created by DmitriiG on 01.02.2023.
+  
+*/
+"alert_title" = "Alert";
+"don't_press_message" = "Don't press this button";
+"accepted" = "Accepted";
+"well_done" = "well done";
+"did't_accepted" = "Did't accepted";
+"undefined" = "Undefined";
+"home" = "Home";
+"profile" = "Profile";
+"fileManager" = "FileManager";
+"moscow" = "Moscow";
+"unknown_status" = "Unknown status";
+"route" = "Route";
+"insert_coordinate" = "Insert coordinate";
+"latitude" = "Latitude";
+"longitude" = "Longitude";
+"error" = "Error";
+"location_can't_be_detected" = "Location can't be detected";
+"postViewController" = "PostViewController";
+"password_prompt" = "The password begins at 'p'";
+"insert_password" = "Insert a password";
+"check" = "Check";
+"password_prompt_descript" = "Green if true, red if false";
+"postButton1" = "PostButton1";
+"mapView" = "MapView";
+"feedView" = "FeedView";
+"secretWord" = "password";
+"info" = "Info";
+"URL_not_found" = "URL not found";
+"fetching_in_process" = "fetching data in process";
+"save_picture" = "Save a picture";
+"choose_name_picture" = "Choose the name of the picture";
+"insert_filename" = "Insert the filename";
+"save" = "Save";
+"cancel" = "Cancel";
+"name_exist" = "The name is already used";
+"settings" = "Settings";
+"directory" = "Directory";
+"add_photo" = "Add photo";
+"create_password" = "Create a password";
+"length_ not_less_4_symbols" = "The length is not less 4 symbols";
+"insert_login" = "Insert a login";
+"login_doesn't_meet_rules" = "The login or password doesn't meet the rules";
+"repeat" = "Repeat";
+"already_have_password" = "Already have a password";
+"repeat_password" = "Repeat a password";
+"insert_password_again" = "Insert a password again";
+"passwords_don't_match" = "Passwords don't match";
+"change_password" = "Change a password";
+"error_transforming_password" = "Transforming password error";
+"password_added" = "The password has been added";
+"error_adding_password:" = "Adding the password error:";
+"error_pair_login/password" = "The pair 'login/password' could not be added";
+"error_receiving_password:" = "Receiving password error:";
+"error_password_doesn't_exist" = "The password doesn't exist";
+"password_incorrect" = "The password is incorrect";
+"password_updated" = "The password has been updated";
+"error_updating_password:" = "Updating password error:";
+"sort" = "Sort";
+"A->Z" = "A->Z";
+"Z->A" = "Z->A";
+"password" = "Password";
+"log_in" = "Log In";
+"sign_up" = "Sign Up";
+"random_password" = "A random password";
+"generate_random_password" = "Generate a random password";
+"hack_use_random_password" = "Hack and use the random password";
+"set_your_status" = "Set your status";
+"set_status" ="Set status";
+"exit" = "Exit";
+"insert_login_password" = "Insert a login and a password";
+"password_login_incorrect" = "The password or login is incorrect";
+"unknown_error" = "Unknown error";
+"no_images_in_collection" = "No images in the collection";
+"post_not_added" = "The post hasn't been added";
+"post_already_contained" = "The favorites has already contained the post";
+"photos" = "Photos";
+"photo_gallery" = "Photo Gallery";
+"failure_registration" = "Registration failure";
+"user_existed_something_wrong" = "The user has already exist or something wrong with the login or the password";
+"successful_registrarion" = "Registration is successful";
+"user_registered" = "The user has been successfully registered";
+"favorites" = "Favorites";
+"no_posts_favorites" = "No posts in the favorites";
+"search_criteria" = "Search criteria";
+"apply" = "Apply";
+"search" = "Search";
+"data_loading_process" = "data loading in process";
+"build_route" = "Build a route";
+"destination" = "Point of destination";
+"destinationInsert" = "Type an address";
+"insert_address" = "Type an address";
+"authFailed" = "Authentication failed";
+"authUnavailable" = "Authentication unavailable";
+"authIsNotSetUp" = "Authentication isn't set up";
+"authCancellded" = "Authentication is cancelled";
+"goingToPassword" = "Going to the password authentication";
+"authIsLocked" = "Authentication is locked";
+"authCannotConfigured" = "Authentication can't be configured";
+"verifyIdentity" = "Verify your identity";
+"enterPassword" = "Enter App password";
+"touchMeNot" = "Touch me not";
+"FaceIDTouchIDnotConfigured" = "Face ID / Touch ID may not be configured";
+"success" = "Success";
+"successAuthentication" = "Authentication is successful";
+"look_update" = "Look at last updates";
+"update" = "Update";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
