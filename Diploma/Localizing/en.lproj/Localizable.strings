@@ -5,6 +5,7 @@
   Created by DmitriiG on 01.02.2023.
   
 */
+
 "alert_title" = "Alert";
 "don't_press_message" = "Don't press this button";
 "accepted" = "Accepted";
@@ -115,6 +116,7 @@
 "successAuthentication" = "Authentication is successful";
 "look_update" = "Look at last updates";
 "update" = "Update";
+"yes" = "Yes";
 "no" = "No";
 "username" = "Username";
 "logIn" = "LogIn?";

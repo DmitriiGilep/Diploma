@@ -63,7 +63,6 @@ final class FavoritesTableViewController: UITableViewController, NSFetchedResult
     
     
     lazy var applyButton = CustomButton(title: (name: "apply".localizable, state: .normal), titleColor: (color: .black, state: .normal), backgroundImage: (image: nil, state: nil)) {
-//        self.searchRequest = self.textFieldForFilter.text
         self.contentView.removeFromSuperview()
         self.initFetchResultsController()
         self.tableView.reloadData()
@@ -114,7 +113,6 @@ final class FavoritesTableViewController: UITableViewController, NSFetchedResult
             navigationController?.navigationBar.isHidden = false
         }
     }
-    
     
     private func setUpContentView() {
         tableView.addSubview(contentView)

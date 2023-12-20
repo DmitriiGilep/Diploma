@@ -337,7 +337,7 @@ final class LogInViewController: UIViewController, CheckerServiceControllerProto
     
     func callAlertViewSignInSuccess() {
         
-        let alert = CustomAlert.shared.createAlertWithTwoCompletion(title: "successful_signIn".localizable, message: "useFaceID".localizable, placeholder: nil, titleAction1: "Ok", action1: {
+        let alert = CustomAlert.shared.createAlertWithTwoCompletion(title: "successful_signIn".localizable, message: "useFaceID".localizable, placeholder: nil, titleAction1: "yes".localizable, action1: {
             FavoritesCoreData.shared.changeAuthMethod()
             self.goToProfilePage()
         }, titleAction2: "no".localizable) {

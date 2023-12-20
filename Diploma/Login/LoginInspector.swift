@@ -20,8 +20,6 @@ final class LoginInspector: LoginViewControllerDelegate, SignUpViewControllerDel
     
     func signUp(login: String, password: String, completion: @escaping (Bool, String?) -> Void) {
         let checkerService = CheckerService()
-//        checkerService.controller = controller
-//        checkerService.realmModel = LoginRealmModel.shared
         checkerService.signUp(login: login, password: password) { result, error in
             completion(result, error)
 

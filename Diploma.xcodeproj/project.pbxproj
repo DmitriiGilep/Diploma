@@ -10,18 +10,12 @@
 		CE02BA5B28AE9D8E0084C663 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BA5A28AE9D8E0084C663 /* CustomButton.swift */; };
 		CE094ACA27CFA1860076C5A8 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE094AC927CFA1860076C5A8 /* ProfileHeaderView.swift */; };
 		CE094ACE27CFA1F20076C5A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE094ACD27CFA1F20076C5A8 /* ProfileViewController.swift */; };
-		CE0E1D4A294DA65A00AFA1D9 /* LoginRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E1D49294DA65A00AFA1D9 /* LoginRealmModel.swift */; };
-		CE3D9C0C29E55EDE00DED357 /* LocalNotificationsServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D9C0B29E55EDE00DED357 /* LocalNotificationsServiceViewController.swift */; };
 		CE3D9C5229E8434D00DED357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D9C5129E8434D00DED357 /* SceneDelegate.swift */; };
 		CE53E06A29CB5EB20057C281 /* LocalAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53E06929CB5EB20057C281 /* LocalAuthorizationService.swift */; };
 		CE5C29202AA854E700D1A5FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5C291F2AA854E600D1A5FE /* GoogleService-Info.plist */; };
 		CE5C29262AA8B60B00D1A5FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C29252AA8B60B00D1A5FE /* User.swift */; };
 		CE8042C12A5C41BF00B69C70 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = CE8042C02A5C41BF00B69C70 /* iOSIntPackage */; };
-		CE8042C72A5C42A000B69C70 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CE8042C62A5C42A000B69C70 /* Realm */; };
-		CE8042C92A5C42A000B69C70 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE8042C82A5C42A000B69C70 /* RealmSwift */; };
 		CE93B66C2900596100B7E7FA /* CheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93B66B2900596100B7E7FA /* CheckerService.swift */; };
-		CE9E34E1293CA73800FC1428 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E34E0293CA73800FC1428 /* PasswordView.swift */; };
-		CE9E34E3293CABB800FC1428 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E34E2293CABB800FC1428 /* SettingsTableViewController.swift */; };
 		CEB1845829675DF000A26EF7 /* Diploma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB1845629675DF000A26EF7 /* Diploma.xcdatamodeld */; };
 		CEB1845F296B3C1400A26EF7 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1845E296B3C1400A26EF7 /* FavoritesTableViewController.swift */; };
 		CEB18461296B565600A26EF7 /* FavoritesCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB18460296B565600A26EF7 /* FavoritesCoreData.swift */; };
@@ -35,7 +29,6 @@
 		CEC254A728B777DD00FD6852 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC254A628B777DD00FD6852 /* FeedCoordinator.swift */; };
 		CEC254A928B777F500FD6852 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC254A828B777F500FD6852 /* ProfileCoordinator.swift */; };
 		CEC254AC28BAA24500FD6852 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF5FC28316D7C00258110 /* Post.swift */; };
-		CEC7D2F7290D5F460013E18D /* FileManagerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC7D2F6290D5F460013E18D /* FileManagerTableViewController.swift */; };
 		CECA8712293E4DDF004CB840 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA8711293E4DDF004CB840 /* CustomAlert.swift */; };
 		CECAF60328367EE700258110 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF60228367EE700258110 /* PhotosTableViewCell.swift */; };
 		CECAF6052837CCCF00258110 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF6042837CCCF00258110 /* PhotosViewController.swift */; };
@@ -48,9 +41,7 @@
 		CED0730728A920AD00DE68DD /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0730628A920AD00DE68DD /* LoginFactory.swift */; };
 		CED0730928A9212600DE68DD /* MyLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0730828A9212600DE68DD /* MyLoginFactory.swift */; };
 		CED23B292A7FEC7300CA1A93 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B282A7FEC7300CA1A93 /* PostViewController.swift */; };
-		CED23B2D2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B2C2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift */; };
 		CED23B2F2A83C92000CA1A93 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B2E2A83C92000CA1A93 /* UIImageExtension.swift */; };
-		CED23B312A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B302A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift */; };
 		CED23B362A96496200CA1A93 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B352A96496200CA1A93 /* NetworkService.swift */; };
 		CED23B382A96497200CA1A93 /* JasonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B372A96497200CA1A93 /* JasonModel.swift */; };
 		CED23B3C2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B3B2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift */; };
@@ -85,15 +76,11 @@
 		CE02BA5A28AE9D8E0084C663 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		CE094AC927CFA1860076C5A8 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		CE094ACD27CFA1F20076C5A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		CE0E1D49294DA65A00AFA1D9 /* LoginRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRealmModel.swift; sourceTree = "<group>"; };
-		CE3D9C0B29E55EDE00DED357 /* LocalNotificationsServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsServiceViewController.swift; sourceTree = "<group>"; };
 		CE3D9C5129E8434D00DED357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE53E06929CB5EB20057C281 /* LocalAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthorizationService.swift; sourceTree = "<group>"; };
 		CE5C291F2AA854E600D1A5FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE5C29252AA8B60B00D1A5FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE93B66B2900596100B7E7FA /* CheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerService.swift; sourceTree = "<group>"; };
-		CE9E34E0293CA73800FC1428 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
-		CE9E34E2293CABB800FC1428 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CEB1845729675DF000A26EF7 /* Industrial.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Industrial.xcdatamodel; sourceTree = "<group>"; };
 		CEB1845E296B3C1400A26EF7 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		CEB18460296B565600A26EF7 /* FavoritesCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoreData.swift; sourceTree = "<group>"; };
@@ -106,7 +93,6 @@
 		CEC254A428B76CA300FD6852 /* NavControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavControllerFactory.swift; sourceTree = "<group>"; };
 		CEC254A628B777DD00FD6852 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		CEC254A828B777F500FD6852 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
-		CEC7D2F6290D5F460013E18D /* FileManagerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerTableViewController.swift; sourceTree = "<group>"; };
 		CECA8711293E4DDF004CB840 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		CECA87132946440C004CB840 /* Diploma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Diploma.entitlements; sourceTree = "<group>"; };
 		CECAF5FC28316D7C00258110 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -123,9 +109,7 @@
 		CED0730628A920AD00DE68DD /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		CED0730828A9212600DE68DD /* MyLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoginFactory.swift; sourceTree = "<group>"; };
 		CED23B282A7FEC7300CA1A93 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		CED23B2C2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		CED23B2E2A83C92000CA1A93 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		CED23B302A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		CED23B352A96496200CA1A93 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CED23B372A96497200CA1A93 /* JasonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasonModel.swift; sourceTree = "<group>"; };
 		CED23B3B2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCollectionView.swift; sourceTree = "<group>"; };
@@ -149,8 +133,6 @@
 			files = (
 				CEEDCA382ACB1E3A009A94A7 /* FirebaseDatabaseSwift in Frameworks */,
 				CEEDCA362ACB1E3A009A94A7 /* FirebaseDatabase in Frameworks */,
-				CE8042C92A5C42A000B69C70 /* RealmSwift in Frameworks */,
-				CE8042C72A5C42A000B69C70 /* Realm in Frameworks */,
 				CEEDCA3A2ACB1E3A009A94A7 /* FirebaseStorage in Frameworks */,
 				CE8042C12A5C41BF00B69C70 /* iOSIntPackage in Frameworks */,
 				CEEDCA342ACB1E3A009A94A7 /* FirebaseAuth in Frameworks */,
@@ -175,8 +157,6 @@
 			children = (
 				CECD183F27BAE36400D89B3F /* FeedViewController.swift */,
 				CED23B282A7FEC7300CA1A93 /* PostViewController.swift */,
-				CED23B2C2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift */,
-				CED23B302A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift */,
 				CED23B3B2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift */,
 			);
 			path = Feed;
@@ -192,14 +172,6 @@
 				CEBC07C92822CE50009B3AC4 /* PostTableViewCell.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		CE3D9C0729E55E9F00DED357 /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-				CE3D9C0B29E55EDE00DED357 /* LocalNotificationsServiceViewController.swift */,
-			);
-			path = Notification;
 			sourceTree = "<group>";
 		};
 		CE53E06529CB5E8B0057C281 /* Authorization */ = {
@@ -237,16 +209,6 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
-		CEC7D2F5290D5F050013E18D /* FileManager */ = {
-			isa = PBXGroup;
-			children = (
-				CEC7D2F6290D5F460013E18D /* FileManagerTableViewController.swift */,
-				CE9E34E0293CA73800FC1428 /* PasswordView.swift */,
-				CE9E34E2293CABB800FC1428 /* SettingsTableViewController.swift */,
-			);
-			path = FileManager;
-			sourceTree = "<group>";
-		};
 		CECD181F27B83C8B00D89B3F = {
 			isa = PBXGroup;
 			children = (
@@ -266,28 +228,26 @@
 		CECD182A27B83C8B00D89B3F /* Diploma */ = {
 			isa = PBXGroup;
 			children = (
-				CEF950992B1B33F300B4E52D /* Firebase */,
-				CE5C291F2AA854E600D1A5FE /* GoogleService-Info.plist */,
-				CECD183627B83C9000D89B3F /* LaunchScreen.storyboard */,
-				CECA87132946440C004CB840 /* Diploma.entitlements */,
-				CECD183927B83C9000D89B3F /* Info.plist */,
 				CECD182B27B83C8B00D89B3F /* AppDelegate.swift */,
-				CE3D9C5129E8434D00DED357 /* SceneDelegate.swift */,
 				CECD183427B83C9000D89B3F /* Assets.xcassets */,
 				CE53E06529CB5E8B0057C281 /* Authorization */,
 				CEC2549E28B76AA700FD6852 /* Coordinators */,
 				CEB1845929675E0500A26EF7 /* CoreData */,
-				CED0730528A9209700DE68DD /* Factory */,
 				CE02BA5928AE9D560084C663 /* CustomElements */,
-				CED23B342A9648C400CA1A93 /* PostModel */,
-				CEC7D2F5290D5F050013E18D /* FileManager */,
-				CEEC4A32298AB52100CDE39B /* Localizing */,
-				CE3D9C0729E55E9F00DED357 /* Notification */,
-				CE02BA5C28AF85260084C663 /* Feed */,
+				CECA87132946440C004CB840 /* Diploma.entitlements */,
+				CED0730528A9209700DE68DD /* Factory */,
 				CED23B1B2A795F4B00CA1A93 /* Favorites */,
+				CE02BA5C28AF85260084C663 /* Feed */,
+				CEF950992B1B33F300B4E52D /* Firebase */,
+				CE5C291F2AA854E600D1A5FE /* GoogleService-Info.plist */,
+				CECD183927B83C9000D89B3F /* Info.plist */,
+				CECD183627B83C9000D89B3F /* LaunchScreen.storyboard */,
+				CEEC4A32298AB52100CDE39B /* Localizing */,
 				CED23B422AA7443D00CA1A93 /* Login */,
-				CE094AC827CFA1370076C5A8 /* Profile */,
 				CED23B432AA7444D00CA1A93 /* Photo */,
+				CED23B342A9648C400CA1A93 /* PostModel */,
+				CE094AC827CFA1370076C5A8 /* Profile */,
+				CE3D9C5129E8434D00DED357 /* SceneDelegate.swift */,
 				CEC254A128B76B9F00FD6852 /* TabBarController */,
 				CEEC4A42299A619500CDE39B /* Themes */,
 			);
@@ -330,7 +290,6 @@
 				CEEDCA3B2ACBFE47009A94A7 /* SignUpViewController.swift */,
 				CED0730228A8173200DE68DD /* LoginInspector.swift */,
 				CE93B66B2900596100B7E7FA /* CheckerService.swift */,
-				CE0E1D49294DA65A00AFA1D9 /* LoginRealmModel.swift */,
 				CE5C29252AA8B60B00D1A5FE /* User.swift */,
 			);
 			path = Login;
@@ -392,8 +351,6 @@
 			name = Diploma;
 			packageProductDependencies = (
 				CE8042C02A5C41BF00B69C70 /* iOSIntPackage */,
-				CE8042C62A5C42A000B69C70 /* Realm */,
-				CE8042C82A5C42A000B69C70 /* RealmSwift */,
 				CEEDCA332ACB1E3A009A94A7 /* FirebaseAuth */,
 				CEEDCA352ACB1E3A009A94A7 /* FirebaseDatabase */,
 				CEEDCA372ACB1E3A009A94A7 /* FirebaseDatabaseSwift */,
@@ -430,7 +387,6 @@
 			mainGroup = CECD181F27B83C8B00D89B3F;
 			packageReferences = (
 				CE8042BF2A5C41BF00B69C70 /* XCRemoteSwiftPackageReference "iOSIntPackage" */,
-				CE8042C52A5C42A000B69C70 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				CEEDCA322ACB1E3A009A94A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CECD182927B83C8B00D89B3F /* Products */;
@@ -464,15 +420,12 @@
 			files = (
 				CEEDCA3C2ACBFE47009A94A7 /* SignUpViewController.swift in Sources */,
 				CED23B382A96497200CA1A93 /* JasonModel.swift in Sources */,
-				CE3D9C0C29E55EDE00DED357 /* LocalNotificationsServiceViewController.swift in Sources */,
 				CE5C29262AA8B60B00D1A5FE /* User.swift in Sources */,
 				CEB18463296C8FE000A26EF7 /* PostFavExtension.swift in Sources */,
 				CEC254A028B76ABE00FD6852 /* MainCoordinator.swift in Sources */,
 				CEC254A328B76BDC00FD6852 /* MainTabBarController.swift in Sources */,
 				CEB1845829675DF000A26EF7 /* Diploma.xcdatamodeld in Sources */,
-				CED23B2D2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift in Sources */,
 				CED23B292A7FEC7300CA1A93 /* PostViewController.swift in Sources */,
-				CED23B312A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift in Sources */,
 				CEB18461296B565600A26EF7 /* FavoritesCoreData.swift in Sources */,
 				CED0730928A9212600DE68DD /* MyLoginFactory.swift in Sources */,
 				CEC254A928B777F500FD6852 /* ProfileCoordinator.swift in Sources */,
@@ -482,7 +435,6 @@
 				CED23B3C2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift in Sources */,
 				CECD182C27B83C8B00D89B3F /* AppDelegate.swift in Sources */,
 				CED0730328A8173200DE68DD /* LoginInspector.swift in Sources */,
-				CEC7D2F7290D5F460013E18D /* FileManagerTableViewController.swift in Sources */,
 				CECAF60328367EE700258110 /* PhotosTableViewCell.swift in Sources */,
 				CECAF6072837D9CC00258110 /* PhotosCollectionViewCell.swift in Sources */,
 				CEF9509B2B1B341A00B4E52D /* FirebaseSigleton.swift in Sources */,
@@ -491,7 +443,6 @@
 				CEC0B89C283C00CC00041DC5 /* Photos.swift in Sources */,
 				CEC171D6280C60F200C0B95E /* LogInViewController.swift in Sources */,
 				CED0730728A920AD00DE68DD /* LoginFactory.swift in Sources */,
-				CE0E1D4A294DA65A00AFA1D9 /* LoginRealmModel.swift in Sources */,
 				CED23B362A96496200CA1A93 /* NetworkService.swift in Sources */,
 				CE93B66C2900596100B7E7FA /* CheckerService.swift in Sources */,
 				CECA8712293E4DDF004CB840 /* CustomAlert.swift in Sources */,
@@ -504,10 +455,8 @@
 				CE02BA5B28AE9D8E0084C663 /* CustomButton.swift in Sources */,
 				CE094ACE27CFA1F20076C5A8 /* ProfileViewController.swift in Sources */,
 				CECAF6052837CCCF00258110 /* PhotosViewController.swift in Sources */,
-				CE9E34E1293CA73800FC1428 /* PasswordView.swift in Sources */,
 				CED23B2F2A83C92000CA1A93 /* UIImageExtension.swift in Sources */,
 				CEC254A728B777DD00FD6852 /* FeedCoordinator.swift in Sources */,
-				CE9E34E3293CABB800FC1428 /* SettingsTableViewController.swift in Sources */,
 				CEBC07CA2822CE50009B3AC4 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,14 +731,6 @@
 				kind = branch;
 			};
 		};
-		CE8042C52A5C42A000B69C70 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		CEEDCA322ACB1E3A009A94A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -805,16 +746,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE8042BF2A5C41BF00B69C70 /* XCRemoteSwiftPackageReference "iOSIntPackage" */;
 			productName = iOSIntPackage;
-		};
-		CE8042C62A5C42A000B69C70 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE8042C52A5C42A000B69C70 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		CE8042C82A5C42A000B69C70 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE8042C52A5C42A000B69C70 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
 		};
 		CEEDCA332ACB1E3A009A94A7 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

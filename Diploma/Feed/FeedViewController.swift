@@ -47,13 +47,13 @@ final class FeedViewController: UIViewController {
         self.view.addSubview(feedTableView)
         setTable()
         initFetchResultsController()
+        feedTableView.reloadData()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initFetchResultsController()
-        feedTableView.reloadData()
     }
     
     private func initFetchResultsController() {
@@ -79,10 +79,7 @@ final class FeedViewController: UIViewController {
         feedTableView.dropDelegate = self
         feedTableView.refreshControl = UIRefreshControl()
         feedTableView.refreshControl?.addTarget(self, action: #selector(loadNewPosts), for: .valueChanged)
-        //        feedTableView.register(FeedHeaderTableViewCell.self, forCellReuseIdentifier: String(describing: FeedHeaderTableViewCell.self))
-        //
-        //        feedTableView.register(FeedHeaderCollectionTableViewCell.self, forCellReuseIdentifier: String(describing: FeedHeaderCollectionTableViewCell.self))
-        //
+        
         feedTableView.register(PostTableViewCell.self, forCellReuseIdentifier: String(describing: PostTableViewCell.self))
         feedTableView.rowHeight = UITableView.automaticDimension
         feedTableView.estimatedRowHeight = 310
@@ -107,7 +104,6 @@ final class FeedViewController: UIViewController {
         
     }
     
-    
     @objc func loadNewPosts() {
         
         _ = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false) { timer in
@@ -121,43 +117,26 @@ final class FeedViewController: UIViewController {
                     let postToAdd = Post(author: tuple.author!, avatarImage: tuple.avatarImage!, descriptionOfPost: tuple.descriptionOfPost!, image: tuple.image!, likes: tuple.likes ?? 0, views: tuple.views ?? 0)
                     FavoritesCoreData.shared.addPostFeed(post: postToAdd)
                     feedTableView.refreshControl?.endRefreshing()
-                    
                 }
             }
         }
         
         NetworkService.request { message in
             DispatchQueue.main.async {
-                    tuple.image = message.message
-                    
-                    //                    if let data = try? Data(contentsOf: URL(string: message.message)!) {
-                    //                        if let image = UIImage(data: data) {
-                    //                            DispatchQueue.main.async {
-                    //                                tuple.image = image
-                    //                            }
-                    //                        }
-                    //                    }
+                tuple.image = message.message
             }
         } completionForData: { profile in
             DispatchQueue.main.async {
                 tuple.author = profile.results[0].name.title + " " + profile.results[0].name.first + " " + profile.results[0].name.last
-                    tuple.avatarImage = profile.results[0].picture.large
-                    
-                    //                    if let data = try? Data(contentsOf: URL(string: profile.results[0].picture.large)!) {
-                    //                        if let image = UIImage(data: data) {
-                    //                            DispatchQueue.main.async {
-                    //                                tuple.avatarImage = image
-                    //                            }
-                    //                        }
-                    //                    }
+                tuple.avatarImage = profile.results[0].picture.large
             }
         } completionForDesctription: { description in
             DispatchQueue.main.async {
                 tuple.descriptionOfPost = description.setup + " " + description.punchline
             }
         }
-    } // networkService
-} // external
+    }
+}
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -174,45 +153,12 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let numberOfRows: Int
-        //
-        //        if section == 0 {
-        //            numberOfRows = 1
-        //        } else {
         numberOfRows = fetchResultsController.sections?[section].numberOfObjects ?? 0
-        //       }
         return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //        if indexPath.section == 0 {
-        //            guard let cell = tableView.dequeueReusableCell(
-        //                withIdentifier: String(describing: FeedHeaderCollectionTableViewCell.self),
-        //                for: indexPath) as? FeedHeaderCollectionTableViewCell
-        //            else {
-        //                return UITableViewCell()
-        //            }
-        
-        //            if cell.imagesStack.arrangedSubviews.isEmpty == true {
-        //                cell.setImages(imagesNames: avatarsImages)
-        //            }
-        //            return cell
-        
-        //            cell.imageForCell(images: avatarsImages, indexPath: indexPath) { [weak self] result in
-        //                switch result {
-        //                case .success(let image):
-        //                    cell.imageForCell = image
-        //                case .failure(let error):
-        //                    let alertView = self?.profileErrorsProcessor.processErrors(error: error)
-        //                    self?.present(alertView!, animated: true, completion: nil)
-        //                }
-        //            }
-        //            cell.delegate = self
-        //            delegate = cell
-        //            return cell
-        
-        
-        //       } else {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: String(describing: PostTableViewCell.self),
             for: indexPath) as? PostTableViewCell
@@ -236,7 +182,6 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
         
-        
         cell.tapAddToFavorites = { [weak self] cell in
             
             guard let post = cell.post else { return }
@@ -248,18 +193,18 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
             
-            if searchFlag {
-                let alert = CustomAlert.shared.createAlertNoCompletion(title: "post_not_added".localizable, message: "post_already_contained".localizable, titleAction: "Ок")
-                self!.present(alert, animated: true)
-            } else {
-                FavoritesCoreData.shared.addPost(post: post)
+            if !FavoritesCoreData.shared.status.isEmpty && FavoritesCoreData.shared.status[0].status {
+                if searchFlag {
+                    let alert = CustomAlert.shared.createAlertNoCompletion(title: "post_not_added".localizable, message: "post_already_contained".localizable, titleAction: "Ок")
+                    self!.present(alert, animated: true)
+                } else {
+                    FavoritesCoreData.shared.addPost(post: post)
+                }
             }
             
         }
         
         return cell
-        //        }
-        
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -297,28 +242,17 @@ extension FeedViewController: NSFetchedResultsControllerDelegate {
     }
 }
 
-//extension FeedViewController: FeedHeaderCollectionTableViewCellDelegate {
-//    func FeedHeaderCollectionTableViewCellImageTapped(tappedImage: UIImage) {
-//        print("well done 🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶 \(String(describing: tappedImage))")
-//    }
-//}
-
 extension FeedViewController: FeedHeaderCollectionViewDelegate {
     func FeedHeaderCollectionViewImageTapped(tappedImage: UIImage) {
         print("well done 🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶🥶 \(String(describing: tappedImage))")
     }
 }
 
-
 extension FeedViewController: UITableViewDragDelegate, UITableViewDropDelegate {
     
     func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         
-        //        guard indexPath.section == 2 else {
-        //            return[]
-        //        }
-        
-        guard indexPath.row != 0 else { return []} // why
+        guard indexPath.row != 0 else { return []}
         guard let cell = tableView.cellForRow(at: indexPath) as? PostTableViewCell else {return []}
         let imageToManipulate = cell.avatarImage.image
         let textToManipulate = cell.descriprionLabel.text
@@ -329,7 +263,7 @@ extension FeedViewController: UITableViewDragDelegate, UITableViewDropDelegate {
         
         let dragItemProviderName = NSItemProvider(object: (textToManipulate ?? "No descriprion")! as NSItemProviderWriting)
         let dragItemName = UIDragItem(itemProvider: dragItemProviderName)
-        dragItemName.localObject = textToManipulate // ?? why
+        dragItemName.localObject = textToManipulate
         
         return [dragItemImage, dragItemName]
         
@@ -371,10 +305,6 @@ extension FeedViewController: UITableViewDragDelegate, UITableViewDropDelegate {
         
         let rowInd = destinationIndexPath.row
         
-        //        let post = Post(author: "Drag&Drop", likes: 0, views: 0)
-        //        self.postDataFeed.postDataArray.insert(post, at: destinationIndexPath.row)
-        
-        
         let group = DispatchGroup()
         
         var postDescription = String()
@@ -386,8 +316,6 @@ extension FeedViewController: UITableViewDragDelegate, UITableViewDropDelegate {
                 break
             }
             group.leave()
-            //            self.postDataFeed.postDataArray[destinationIndexPath.row].descriptionOfPost = descriptions.first
-            //            tableView.reloadData()
         }
         
         var postImage = UIImage()
@@ -399,8 +327,6 @@ extension FeedViewController: UITableViewDragDelegate, UITableViewDropDelegate {
                 break
             }
             group.leave()
-            //            self.postDataArray[destinationIndexPath.row].image = images.first
-            //            tableView.reloadData()
         }
         
         group.notify(queue: .main) {
