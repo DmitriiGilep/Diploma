@@ -85,8 +85,10 @@ final class LocalAuthorizationService {
                     completion(true, nil)
                 } else {
                     guard let error = error else {
+
                         return completion(false, nil)
                     }
+
                     completion(false, self?.biometricError(from: error as NSError))
                 }
             }

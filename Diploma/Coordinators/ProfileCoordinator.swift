@@ -10,29 +10,35 @@ import UIKit
 
 protocol ProfileCoordinatorProtocol {
     var navController: UINavigationController? { get set }
-    func profileViewController(coordinator: ProfileCoordinatorProtocol, controller: LogInViewController, navControllerFromFactory: UINavigationController?)
+    func loginViewController(coordinator: ProfileCoordinatorProtocol)
+    func signUpViewController(coordinator: ProfileCoordinatorProtocol)
+    func profileViewController(coordinator: ProfileCoordinatorProtocol, navControllerFromFactory: UINavigationController?)
     func photosViewController(profileViewController: ProfileViewController)
-    func favoritesTableViewController()
-
 }
 
 final class ProfileCoordinator: ProfileCoordinatorProtocol {
     
     var navController: UINavigationController?
     
-    func profileViewController(coordinator: ProfileCoordinatorProtocol, controller: LogInViewController, navControllerFromFactory: UINavigationController?) {
- #if DEBUG
-        let userService = TestUserService()
-#else
-        let userService = CurrentUserService()
-#endif
-        let profileViewController = ProfileViewController(userService: userService, userName: LoginRealmModel.shared.status.login ?? "undefined".localizable, coordinator: coordinator, controller: controller)
-//        if let navFromFactory = navControllerFromFactory {
-//            navFromFactory.pushViewController(profileViewController, animated: true)
-//        } else {
-            navController?.pushViewController(profileViewController, animated: true)
- //       }
-        
+    
+    func loginViewController(coordinator: ProfileCoordinatorProtocol) {
+        let loginViewController = LogInViewController(coordinator: coordinator)
+        let myLoginFactory = MyLoginFactory()
+        loginViewController.delegate = myLoginFactory.loginInspector()
+        navController?.setViewControllers([loginViewController], animated: true)
+    }
+    
+    func signUpViewController(coordinator: ProfileCoordinatorProtocol) {
+        let signUpViewController = SignUpViewController(coordinator: coordinator)
+        let myLoginFactory = MyLoginFactory()
+        signUpViewController.delegate = myLoginFactory.loginInspector()
+        navController?.setViewControllers([signUpViewController], animated: true)
+    }
+    
+    func profileViewController(coordinator: ProfileCoordinatorProtocol, navControllerFromFactory: UINavigationController?) {
+        let profileViewController = ProfileViewController(coordinator: coordinator)
+        navController?.setViewControllers([profileViewController], animated: true)
+
     }
     
     func photosViewController(profileViewController: ProfileViewController) {
@@ -40,17 +46,5 @@ final class ProfileCoordinator: ProfileCoordinatorProtocol {
         photosViewController.navigationController?.isNavigationBarHidden = false
         profileViewController.navigationController?.pushViewController(photosViewController, animated: true)
     }
-    
-    func favoritesTableViewController() {
-        if #available(iOS 16.0, *) {
-            let favoritesTableViewController = FavoritesTableViewController()
-            navController?.navigationBar.isHidden = false
-            navController?.pushViewController(favoritesTableViewController, animated: true)
-        } else {
-            let alert = CustomAlert.shared.createAlertNoCompletion(title: "Warning", message: "This link is unavailable for your version of OS", titleAction: "ok".localizable)
-            navController?.present(alert, animated: true)
-        }
-    }
-    
     
 }

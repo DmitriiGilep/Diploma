@@ -7,37 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		229DF33E3B74A480436A3DCC /* Pods_StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F0B5924E81DC562A6F1D92 /* Pods_StorageService.framework */; };
-		A5638813F1F219C0C5C275A9 /* Pods_Diploma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9A453ABE19CDF318CBD23C /* Pods_Diploma.framework */; };
 		CE02BA5B28AE9D8E0084C663 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BA5A28AE9D8E0084C663 /* CustomButton.swift */; };
-		CE02BA5E28AF85480084C663 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02BA5D28AF85480084C663 /* FeedModel.swift */; };
 		CE094ACA27CFA1860076C5A8 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE094AC927CFA1860076C5A8 /* ProfileHeaderView.swift */; };
 		CE094ACE27CFA1F20076C5A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE094ACD27CFA1F20076C5A8 /* ProfileViewController.swift */; };
 		CE0E1D4A294DA65A00AFA1D9 /* LoginRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E1D49294DA65A00AFA1D9 /* LoginRealmModel.swift */; };
 		CE3D9C0C29E55EDE00DED357 /* LocalNotificationsServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D9C0B29E55EDE00DED357 /* LocalNotificationsServiceViewController.swift */; };
 		CE3D9C5229E8434D00DED357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D9C5129E8434D00DED357 /* SceneDelegate.swift */; };
 		CE53E06A29CB5EB20057C281 /* LocalAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53E06929CB5EB20057C281 /* LocalAuthorizationService.swift */; };
-		CE6F109E28F893F100DDCB67 /* JasonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F109D28F893F100DDCB67 /* JasonModel.swift */; };
-		CE75098A289826D1004F76B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE750989289826D1004F76B6 /* User.swift */; };
+		CE5C29202AA854E700D1A5FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5C291F2AA854E600D1A5FE /* GoogleService-Info.plist */; };
+		CE5C29262AA8B60B00D1A5FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C29252AA8B60B00D1A5FE /* User.swift */; };
 		CE8042C12A5C41BF00B69C70 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = CE8042C02A5C41BF00B69C70 /* iOSIntPackage */; };
 		CE8042C72A5C42A000B69C70 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CE8042C62A5C42A000B69C70 /* Realm */; };
 		CE8042C92A5C42A000B69C70 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE8042C82A5C42A000B69C70 /* RealmSwift */; };
-		CE8042CC2A5C435700B69C70 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE8042CB2A5C435700B69C70 /* FirebaseAuth */; };
-		CE8042CE2A5C435700B69C70 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CE8042CD2A5C435700B69C70 /* FirebaseStorage */; };
-		CE8042D92A6EC72D00B69C70 /* FeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8042D82A6EC72C00B69C70 /* FeedHeaderView.swift */; };
-		CE89E04228F41E10007F321E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89E04128F41E10007F321E /* NetworkService.swift */; };
-		CE93B66A28FFF9F100B7E7FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE93B66928FFF9F000B7E7FA /* GoogleService-Info.plist */; };
 		CE93B66C2900596100B7E7FA /* CheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93B66B2900596100B7E7FA /* CheckerService.swift */; };
 		CE9E34E1293CA73800FC1428 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E34E0293CA73800FC1428 /* PasswordView.swift */; };
 		CE9E34E3293CABB800FC1428 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E34E2293CABB800FC1428 /* SettingsTableViewController.swift */; };
 		CEB1845829675DF000A26EF7 /* Diploma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB1845629675DF000A26EF7 /* Diploma.xcdatamodeld */; };
-		CEB1845B296AF22400A26EF7 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1845A296AF22400A26EF7 /* FavoritesCell.swift */; };
 		CEB1845F296B3C1400A26EF7 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB1845E296B3C1400A26EF7 /* FavoritesTableViewController.swift */; };
 		CEB18461296B565600A26EF7 /* FavoritesCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB18460296B565600A26EF7 /* FavoritesCoreData.swift */; };
 		CEB18463296C8FE000A26EF7 /* PostFavExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB18462296C8FE000A26EF7 /* PostFavExtension.swift */; };
 		CEBC07CA2822CE50009B3AC4 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC07C92822CE50009B3AC4 /* PostTableViewCell.swift */; };
-		CEBF4CC929BF6C650084BC3E /* CheckerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF4CC829BF6C650084BC3E /* CheckerServiceTests.swift */; };
-		CEBF4CF329C1F4EF0084BC3E /* FeedCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBF4CF229C1F4EF0084BC3E /* FeedCoordinatorTests.swift */; };
 		CEC0B89C283C00CC00041DC5 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0B89B283C00CC00041DC5 /* Photos.swift */; };
 		CEC171D6280C60F200C0B95E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC171D5280C60F200C0B95E /* LogInViewController.swift */; };
 		CEC254A028B76ABE00FD6852 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2549F28B76ABE00FD6852 /* MainCoordinator.swift */; };
@@ -45,19 +34,8 @@
 		CEC254A528B76CA300FD6852 /* NavControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC254A428B76CA300FD6852 /* NavControllerFactory.swift */; };
 		CEC254A728B777DD00FD6852 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC254A628B777DD00FD6852 /* FeedCoordinator.swift */; };
 		CEC254A928B777F500FD6852 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC254A828B777F500FD6852 /* ProfileCoordinator.swift */; };
-		CEC254AB28B7905100FD6852 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC254AA28B7905100FD6852 /* ViewControllerFactory.swift */; };
 		CEC254AC28BAA24500FD6852 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF5FC28316D7C00258110 /* Post.swift */; };
-		CEC254AF28BAA2C800FD6852 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC254AE28BAA2C800FD6852 /* FeedViewModel.swift */; };
-		CEC254B128BDEE9700FD6852 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC254B028BDEE9700FD6852 /* PostViewModel.swift */; };
-		CEC254B328BDEFE700FD6852 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC254B228BDEFE700FD6852 /* InfoViewModel.swift */; };
-		CEC5B094289C2AAA0018A46D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B093289C2AA90018A46D /* UserService.swift */; };
-		CEC5B096289C2AE10018A46D /* TestUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B095289C2AE10018A46D /* TestUserService.swift */; };
-		CEC5B098289C2C050018A46D /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5B097289C2C050018A46D /* CurrentUserService.swift */; };
 		CEC7D2F7290D5F460013E18D /* FileManagerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC7D2F6290D5F460013E18D /* FileManagerTableViewController.swift */; };
-		CEC8627928CA241800799361 /* BruteForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8627828CA241800799361 /* BruteForce.swift */; };
-		CEC8627B28CA273000799361 /* GenerateRandomPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8627A28CA273000799361 /* GenerateRandomPassword.swift */; };
-		CECA1FDB28814911000595A4 /* StorageService.h in Headers */ = {isa = PBXBuildFile; fileRef = CECA1FDA28814911000595A4 /* StorageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CECA1FDF28814911000595A4 /* StorageService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CECA1FD828814910000595A4 /* StorageService.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CECA8712293E4DDF004CB840 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA8711293E4DDF004CB840 /* CustomAlert.swift */; };
 		CECAF60328367EE700258110 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF60228367EE700258110 /* PhotosTableViewCell.swift */; };
 		CECAF6052837CCCF00258110 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF6042837CCCF00258110 /* PhotosViewController.swift */; };
@@ -66,73 +44,29 @@
 		CECD183527B83C9000D89B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECD183427B83C9000D89B3F /* Assets.xcassets */; };
 		CECD183827B83C9000D89B3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECD183627B83C9000D89B3F /* LaunchScreen.storyboard */; };
 		CECD184027BAE36400D89B3F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD183F27BAE36400D89B3F /* FeedViewController.swift */; };
-		CECD184427BC401600D89B3F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD184327BC401600D89B3F /* PostViewController.swift */; };
-		CECD184627C16E1A00D89B3F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD184527C16E1900D89B3F /* InfoViewController.swift */; };
-		CED0730128A813AD00DE68DD /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0730028A813AD00DE68DD /* Checker.swift */; };
 		CED0730328A8173200DE68DD /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0730228A8173200DE68DD /* LoginInspector.swift */; };
 		CED0730728A920AD00DE68DD /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0730628A920AD00DE68DD /* LoginFactory.swift */; };
 		CED0730928A9212600DE68DD /* MyLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0730828A9212600DE68DD /* MyLoginFactory.swift */; };
+		CED23B292A7FEC7300CA1A93 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B282A7FEC7300CA1A93 /* PostViewController.swift */; };
+		CED23B2D2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B2C2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift */; };
+		CED23B2F2A83C92000CA1A93 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B2E2A83C92000CA1A93 /* UIImageExtension.swift */; };
+		CED23B312A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B302A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift */; };
+		CED23B362A96496200CA1A93 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B352A96496200CA1A93 /* NetworkService.swift */; };
+		CED23B382A96497200CA1A93 /* JasonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B372A96497200CA1A93 /* JasonModel.swift */; };
+		CED23B3C2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED23B3B2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift */; };
 		CEDE0BC728DED73800BD3C7C /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE0BC628DED73800BD3C7C /* ProfileModel.swift */; };
-		CEDF761129841BBC002A1267 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF761029841BBC002A1267 /* MapViewController.swift */; };
 		CEEC4A2D298AB4C400CDE39B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEEC4A2F298AB4C400CDE39B /* Localizable.strings */; };
 		CEEC4A34298AB55100CDE39B /* ExtensionForLocalizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC4A33298AB55100CDE39B /* ExtensionForLocalizing.swift */; };
 		CEEC4A39298BBF2700CDE39B /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = CEEC4A3B298BBF2700CDE39B /* Localizable.stringsdict */; };
 		CEEC4A44299A61AF00CDE39B /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC4A43299A61AF00CDE39B /* ColorExtension.swift */; };
 		CEEC4A46299A63D100CDE39B /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC4A45299A63D100CDE39B /* CustomColors.swift */; };
-		CEFF058A29C8A6DE00A21BD3 /* ProfileCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF058929C8A6DE00A21BD3 /* ProfileCoordinatorTests.swift */; };
+		CEEDCA342ACB1E3A009A94A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CEEDCA332ACB1E3A009A94A7 /* FirebaseAuth */; };
+		CEEDCA362ACB1E3A009A94A7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CEEDCA352ACB1E3A009A94A7 /* FirebaseDatabase */; };
+		CEEDCA382ACB1E3A009A94A7 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEEDCA372ACB1E3A009A94A7 /* FirebaseDatabaseSwift */; };
+		CEEDCA3A2ACB1E3A009A94A7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CEEDCA392ACB1E3A009A94A7 /* FirebaseStorage */; };
+		CEEDCA3C2ACBFE47009A94A7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDCA3B2ACBFE47009A94A7 /* SignUpViewController.swift */; };
+		CEF9509B2B1B341A00B4E52D /* FirebaseSigleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9509A2B1B341A00B4E52D /* FirebaseSigleton.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CE2150912A572990009B3D19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CEB18464296C998C00A26EF7 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0D432D2E16B10D0DD5CC5463CDF0F5DF;
-			remoteInfo = "Pods-Diploma";
-		};
-		CEB1846C296C998D00A26EF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CEB18464296C998C00A26EF7 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 14FE66AD7513DA1D4353206DB8339C9E;
-			remoteInfo = "Pods-StorageService";
-		};
-		CEB1846E296C998D00A26EF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CEB18464296C998C00A26EF7 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 979486118B3E90C08386079D57962701;
-			remoteInfo = SnapKit;
-		};
-		CEBF4CCA29BF6C650084BC3E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CECD182027B83C8B00D89B3F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CECD182727B83C8B00D89B3F;
-			remoteInfo = Industrial;
-		};
-		CEBF4CF429C1F4EF0084BC3E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CECD182027B83C8B00D89B3F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CECD182727B83C8B00D89B3F;
-			remoteInfo = Industrial;
-		};
-		CECA1FDC28814911000595A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CECD182027B83C8B00D89B3F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CECA1FD728814910000595A4;
-			remoteInfo = StorageService;
-		};
-		CEFF058B29C8A6DE00A21BD3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CECD182027B83C8B00D89B3F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CECD182727B83C8B00D89B3F;
-			remoteInfo = Industrial;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CECA1FE328814911000595A4 /* Embed Frameworks */ = {
@@ -141,7 +75,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CECA1FDF28814911000595A4 /* StorageService.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,39 +82,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1B7F808191D6C47BE9A555A3 /* Pods_Industrial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Industrial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		21A0F5B5F879BF4D2A066533 /* Pods-StorageService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorageService.release.xcconfig"; path = "Target Support Files/Pods-StorageService/Pods-StorageService.release.xcconfig"; sourceTree = "<group>"; };
-		33F0B5924E81DC562A6F1D92 /* Pods_StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		583D0DD21BD3F766B82D7C35 /* Pods-Diploma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diploma.debug.xcconfig"; path = "Target Support Files/Pods-Diploma/Pods-Diploma.debug.xcconfig"; sourceTree = "<group>"; };
-		82C13CC63A00A8919BB3E30D /* Pods-Diploma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diploma.release.xcconfig"; path = "Target Support Files/Pods-Diploma/Pods-Diploma.release.xcconfig"; sourceTree = "<group>"; };
-		A6F69F3405C09525E009341F /* Pods-StorageService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StorageService.debug.xcconfig"; path = "Target Support Files/Pods-StorageService/Pods-StorageService.debug.xcconfig"; sourceTree = "<group>"; };
 		CE02BA5A28AE9D8E0084C663 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		CE02BA5D28AF85480084C663 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		CE094AC927CFA1860076C5A8 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		CE094ACD27CFA1F20076C5A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE0E1D49294DA65A00AFA1D9 /* LoginRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRealmModel.swift; sourceTree = "<group>"; };
 		CE3D9C0B29E55EDE00DED357 /* LocalNotificationsServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsServiceViewController.swift; sourceTree = "<group>"; };
 		CE3D9C5129E8434D00DED357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE53E06929CB5EB20057C281 /* LocalAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthorizationService.swift; sourceTree = "<group>"; };
-		CE6F109D28F893F100DDCB67 /* JasonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasonModel.swift; sourceTree = "<group>"; };
-		CE750989289826D1004F76B6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CE8042D82A6EC72C00B69C70 /* FeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderView.swift; sourceTree = "<group>"; };
-		CE89E04128F41E10007F321E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		CE93B66928FFF9F000B7E7FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Diploma/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CE5C291F2AA854E600D1A5FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE5C29252AA8B60B00D1A5FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE93B66B2900596100B7E7FA /* CheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerService.swift; sourceTree = "<group>"; };
 		CE9E34E0293CA73800FC1428 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		CE9E34E2293CABB800FC1428 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CEB1845729675DF000A26EF7 /* Industrial.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Industrial.xcdatamodel; sourceTree = "<group>"; };
-		CEB1845A296AF22400A26EF7 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
 		CEB1845E296B3C1400A26EF7 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		CEB18460296B565600A26EF7 /* FavoritesCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoreData.swift; sourceTree = "<group>"; };
 		CEB18462296C8FE000A26EF7 /* PostFavExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFavExtension.swift; sourceTree = "<group>"; };
-		CEB18464296C998C00A26EF7 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../../Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		CEBC07C92822CE50009B3AC4 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		CEBF4CC629BF6C640084BC3E /* CheckerServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckerServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEBF4CC829BF6C650084BC3E /* CheckerServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerServiceTests.swift; sourceTree = "<group>"; };
-		CEBF4CF029C1F4EE0084BC3E /* FeedCoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedCoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEBF4CF229C1F4EF0084BC3E /* FeedCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinatorTests.swift; sourceTree = "<group>"; };
 		CEC0B89B283C00CC00041DC5 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		CEC171D5280C60F200C0B95E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CEC2549F28B76ABE00FD6852 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -189,21 +106,10 @@
 		CEC254A428B76CA300FD6852 /* NavControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavControllerFactory.swift; sourceTree = "<group>"; };
 		CEC254A628B777DD00FD6852 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		CEC254A828B777F500FD6852 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
-		CEC254AA28B7905100FD6852 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
-		CEC254AE28BAA2C800FD6852 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
-		CEC254B028BDEE9700FD6852 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
-		CEC254B228BDEFE700FD6852 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
-		CEC5B093289C2AA90018A46D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		CEC5B095289C2AE10018A46D /* TestUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserService.swift; sourceTree = "<group>"; };
-		CEC5B097289C2C050018A46D /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
 		CEC7D2F6290D5F460013E18D /* FileManagerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerTableViewController.swift; sourceTree = "<group>"; };
-		CEC8627828CA241800799361 /* BruteForce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BruteForce.swift; sourceTree = "<group>"; };
-		CEC8627A28CA273000799361 /* GenerateRandomPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRandomPassword.swift; sourceTree = "<group>"; };
-		CECA1FD828814910000595A4 /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CECA1FDA28814911000595A4 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		CECA8711293E4DDF004CB840 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		CECA87132946440C004CB840 /* Diploma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Diploma.entitlements; sourceTree = "<group>"; };
-		CECAF5FC28316D7C00258110 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post/Post.swift; sourceTree = "<group>"; };
+		CECAF5FC28316D7C00258110 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CECAF60228367EE700258110 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		CECAF6042837CCCF00258110 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		CECAF6062837D9CC00258110 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -213,14 +119,17 @@
 		CECD183727B83C9000D89B3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CECD183927B83C9000D89B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECD183F27BAE36400D89B3F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		CECD184327BC401600D89B3F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		CECD184527C16E1900D89B3F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		CED0730028A813AD00DE68DD /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		CED0730228A8173200DE68DD /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		CED0730628A920AD00DE68DD /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		CED0730828A9212600DE68DD /* MyLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoginFactory.swift; sourceTree = "<group>"; };
+		CED23B282A7FEC7300CA1A93 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		CED23B2C2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		CED23B2E2A83C92000CA1A93 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		CED23B302A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		CED23B352A96496200CA1A93 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CED23B372A96497200CA1A93 /* JasonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasonModel.swift; sourceTree = "<group>"; };
+		CED23B3B2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedHeaderCollectionView.swift; sourceTree = "<group>"; };
 		CEDE0BC628DED73800BD3C7C /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
-		CEDF761029841BBC002A1267 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CEEC4A2E298AB4C400CDE39B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEEC4A30298AB4F000CDE39B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CEEC4A31298AB4F100CDE39B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -229,121 +138,58 @@
 		CEEC4A3D298BE4DF00CDE39B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		CEEC4A43299A61AF00CDE39B /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		CEEC4A45299A63D100CDE39B /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
-		CEFF058729C8A6DE00A21BD3 /* ProfileCoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfileCoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEFF058929C8A6DE00A21BD3 /* ProfileCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorTests.swift; sourceTree = "<group>"; };
-		FD9A453ABE19CDF318CBD23C /* Pods_Diploma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diploma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEDCA3B2ACBFE47009A94A7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CEF9509A2B1B341A00B4E52D /* FirebaseSigleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSigleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CEBF4CC329BF6C640084BC3E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEBF4CED29C1F4EE0084BC3E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CECA1FD528814910000595A4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				229DF33E3B74A480436A3DCC /* Pods_StorageService.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CECD182527B83C8B00D89B3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEDCA382ACB1E3A009A94A7 /* FirebaseDatabaseSwift in Frameworks */,
+				CEEDCA362ACB1E3A009A94A7 /* FirebaseDatabase in Frameworks */,
 				CE8042C92A5C42A000B69C70 /* RealmSwift in Frameworks */,
-				CE8042CC2A5C435700B69C70 /* FirebaseAuth in Frameworks */,
 				CE8042C72A5C42A000B69C70 /* Realm in Frameworks */,
-				A5638813F1F219C0C5C275A9 /* Pods_Diploma.framework in Frameworks */,
+				CEEDCA3A2ACB1E3A009A94A7 /* FirebaseStorage in Frameworks */,
 				CE8042C12A5C41BF00B69C70 /* iOSIntPackage in Frameworks */,
-				CE8042CE2A5C435700B69C70 /* FirebaseStorage in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEFF058429C8A6DE00A21BD3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				CEEDCA342ACB1E3A009A94A7 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B010C07330312AD5B2E31B3A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1B7F808191D6C47BE9A555A3 /* Pods_Industrial.framework */,
-				33F0B5924E81DC562A6F1D92 /* Pods_StorageService.framework */,
-				FD9A453ABE19CDF318CBD23C /* Pods_Diploma.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CE02BA5928AE9D560084C663 /* CustomElements */ = {
 			isa = PBXGroup;
 			children = (
 				CE02BA5A28AE9D8E0084C663 /* CustomButton.swift */,
 				CECA8711293E4DDF004CB840 /* CustomAlert.swift */,
+				CED23B2E2A83C92000CA1A93 /* UIImageExtension.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
 		};
-		CE02BA5C28AF85260084C663 /* Feed - MVVM */ = {
+		CE02BA5C28AF85260084C663 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				CECD183F27BAE36400D89B3F /* FeedViewController.swift */,
-				CE8042D82A6EC72C00B69C70 /* FeedHeaderView.swift */,
-				CEC254AE28BAA2C800FD6852 /* FeedViewModel.swift */,
-				CE02BA5D28AF85480084C663 /* FeedModel.swift */,
-				CECD184327BC401600D89B3F /* PostViewController.swift */,
-				CEC254B028BDEE9700FD6852 /* PostViewModel.swift */,
-				CE89E04128F41E10007F321E /* NetworkService.swift */,
-				CECD184527C16E1900D89B3F /* InfoViewController.swift */,
-				CEC254B228BDEFE700FD6852 /* InfoViewModel.swift */,
-				CE6F109D28F893F100DDCB67 /* JasonModel.swift */,
+				CED23B282A7FEC7300CA1A93 /* PostViewController.swift */,
+				CED23B2C2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift */,
+				CED23B302A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift */,
+				CED23B3B2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift */,
 			);
-			path = "Feed - MVVM";
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		CE094AC827CFA1370076C5A8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CECAF5FC28316D7C00258110 /* Post.swift */,
-				CEC171D5280C60F200C0B95E /* LogInViewController.swift */,
-				CED0730228A8173200DE68DD /* LoginInspector.swift */,
+				CE094ACD27CFA1F20076C5A8 /* ProfileViewController.swift */,
 				CE094AC927CFA1860076C5A8 /* ProfileHeaderView.swift */,
 				CEDE0BC628DED73800BD3C7C /* ProfileModel.swift */,
-				CE094ACD27CFA1F20076C5A8 /* ProfileViewController.swift */,
 				CECAF60228367EE700258110 /* PhotosTableViewCell.swift */,
-				CECAF6062837D9CC00258110 /* PhotosCollectionViewCell.swift */,
-				CECAF6042837CCCF00258110 /* PhotosViewController.swift */,
-				CEC0B89B283C00CC00041DC5 /* Photos.swift */,
 				CEBC07C92822CE50009B3AC4 /* PostTableViewCell.swift */,
-				CE750989289826D1004F76B6 /* User.swift */,
-				CEC5B093289C2AA90018A46D /* UserService.swift */,
-				CE93B66B2900596100B7E7FA /* CheckerService.swift */,
-				CEC5B095289C2AE10018A46D /* TestUserService.swift */,
-				CEC5B097289C2C050018A46D /* CurrentUserService.swift */,
-				CED0730028A813AD00DE68DD /* Checker.swift */,
-				CEC8627828CA241800799361 /* BruteForce.swift */,
-				CEC8627A28CA273000799361 /* GenerateRandomPassword.swift */,
-				CE0E1D49294DA65A00AFA1D9 /* LoginRealmModel.swift */,
-				CEB1845A296AF22400A26EF7 /* FavoritesCell.swift */,
-				CEB1845E296B3C1400A26EF7 /* FavoritesTableViewController.swift */,
-				CEB18460296B565600A26EF7 /* FavoritesCoreData.swift */,
-				CEB18462296C8FE000A26EF7 /* PostFavExtension.swift */,
-				CEB18464296C998C00A26EF7 /* Pods.xcodeproj */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -364,45 +210,13 @@
 			path = Authorization;
 			sourceTree = "<group>";
 		};
-		CE8042DA2A6EE69400B69C70 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		CEB1845929675E0500A26EF7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				CEB18460296B565600A26EF7 /* FavoritesCoreData.swift */,
 				CEB1845629675DF000A26EF7 /* Diploma.xcdatamodeld */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		CEB18465296C998C00A26EF7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CE2150922A572990009B3D19 /* Pods-Diploma */,
-				CEB1846D296C998D00A26EF7 /* Pods-StorageService */,
-				CEB1846F296C998D00A26EF7 /* SnapKit */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CEBF4CC729BF6C650084BC3E /* CheckerServiceTests */ = {
-			isa = PBXGroup;
-			children = (
-				CEBF4CC829BF6C650084BC3E /* CheckerServiceTests.swift */,
-			);
-			path = CheckerServiceTests;
-			sourceTree = "<group>";
-		};
-		CEBF4CF129C1F4EF0084BC3E /* FeedCoordinatorTests */ = {
-			isa = PBXGroup;
-			children = (
-				CEBF4CF229C1F4EF0084BC3E /* FeedCoordinatorTests.swift */,
-			);
-			path = FeedCoordinatorTests;
 			sourceTree = "<group>";
 		};
 		CEC2549E28B76AA700FD6852 /* Coordinators */ = {
@@ -433,26 +247,11 @@
 			path = FileManager;
 			sourceTree = "<group>";
 		};
-		CECA1FD928814911000595A4 /* StorageService */ = {
-			isa = PBXGroup;
-			children = (
-				CECA1FDA28814911000595A4 /* StorageService.h */,
-			);
-			path = StorageService;
-			sourceTree = "<group>";
-		};
 		CECD181F27B83C8B00D89B3F = {
 			isa = PBXGroup;
 			children = (
-				CE8042DA2A6EE69400B69C70 /* New Group */,
 				CECD182A27B83C8B00D89B3F /* Diploma */,
-				CECA1FD928814911000595A4 /* StorageService */,
-				CEBF4CC729BF6C650084BC3E /* CheckerServiceTests */,
-				CEBF4CF129C1F4EF0084BC3E /* FeedCoordinatorTests */,
-				CEFF058829C8A6DE00A21BD3 /* ProfileCoordinatorTests */,
 				CECD182927B83C8B00D89B3F /* Products */,
-				D367114465DACCC7A31A112D /* Pods */,
-				B010C07330312AD5B2E31B3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -460,10 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				CECD182827B83C8B00D89B3F /* Diploma.app */,
-				CECA1FD828814910000595A4 /* StorageService.framework */,
-				CEBF4CC629BF6C640084BC3E /* CheckerServiceTests.xctest */,
-				CEBF4CF029C1F4EE0084BC3E /* FeedCoordinatorTests.xctest */,
-				CEFF058729C8A6DE00A21BD3 /* ProfileCoordinatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -471,9 +266,10 @@
 		CECD182A27B83C8B00D89B3F /* Diploma */ = {
 			isa = PBXGroup;
 			children = (
+				CEF950992B1B33F300B4E52D /* Firebase */,
+				CE5C291F2AA854E600D1A5FE /* GoogleService-Info.plist */,
 				CECD183627B83C9000D89B3F /* LaunchScreen.storyboard */,
 				CECA87132946440C004CB840 /* Diploma.entitlements */,
-				CE93B66928FFF9F000B7E7FA /* GoogleService-Info.plist */,
 				CECD183927B83C9000D89B3F /* Info.plist */,
 				CECD182B27B83C8B00D89B3F /* AppDelegate.swift */,
 				CE3D9C5129E8434D00DED357 /* SceneDelegate.swift */,
@@ -481,14 +277,17 @@
 				CE53E06529CB5E8B0057C281 /* Authorization */,
 				CEC2549E28B76AA700FD6852 /* Coordinators */,
 				CEB1845929675E0500A26EF7 /* CoreData */,
-				CE02BA5928AE9D560084C663 /* CustomElements */,
 				CED0730528A9209700DE68DD /* Factory */,
-				CE02BA5C28AF85260084C663 /* Feed - MVVM */,
+				CE02BA5928AE9D560084C663 /* CustomElements */,
+				CED23B342A9648C400CA1A93 /* PostModel */,
 				CEC7D2F5290D5F050013E18D /* FileManager */,
 				CEEC4A32298AB52100CDE39B /* Localizing */,
-				CEDF760F29841B81002A1267 /* MapView */,
 				CE3D9C0729E55E9F00DED357 /* Notification */,
+				CE02BA5C28AF85260084C663 /* Feed */,
+				CED23B1B2A795F4B00CA1A93 /* Favorites */,
+				CED23B422AA7443D00CA1A93 /* Login */,
 				CE094AC827CFA1370076C5A8 /* Profile */,
+				CED23B432AA7444D00CA1A93 /* Photo */,
 				CEC254A128B76B9F00FD6852 /* TabBarController */,
 				CEEC4A42299A619500CDE39B /* Themes */,
 			);
@@ -501,17 +300,50 @@
 				CED0730628A920AD00DE68DD /* LoginFactory.swift */,
 				CED0730828A9212600DE68DD /* MyLoginFactory.swift */,
 				CEC254A428B76CA300FD6852 /* NavControllerFactory.swift */,
-				CEC254AA28B7905100FD6852 /* ViewControllerFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
 		};
-		CEDF760F29841B81002A1267 /* MapView */ = {
+		CED23B1B2A795F4B00CA1A93 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				CEDF761029841BBC002A1267 /* MapViewController.swift */,
+				CEB1845E296B3C1400A26EF7 /* FavoritesTableViewController.swift */,
+				CEB18462296C8FE000A26EF7 /* PostFavExtension.swift */,
 			);
-			path = MapView;
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		CED23B342A9648C400CA1A93 /* PostModel */ = {
+			isa = PBXGroup;
+			children = (
+				CECAF5FC28316D7C00258110 /* Post.swift */,
+				CED23B352A96496200CA1A93 /* NetworkService.swift */,
+				CED23B372A96497200CA1A93 /* JasonModel.swift */,
+			);
+			path = PostModel;
+			sourceTree = "<group>";
+		};
+		CED23B422AA7443D00CA1A93 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CEC171D5280C60F200C0B95E /* LogInViewController.swift */,
+				CEEDCA3B2ACBFE47009A94A7 /* SignUpViewController.swift */,
+				CED0730228A8173200DE68DD /* LoginInspector.swift */,
+				CE93B66B2900596100B7E7FA /* CheckerService.swift */,
+				CE0E1D49294DA65A00AFA1D9 /* LoginRealmModel.swift */,
+				CE5C29252AA8B60B00D1A5FE /* User.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CED23B432AA7444D00CA1A93 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				CECAF6042837CCCF00258110 /* PhotosViewController.swift */,
+				CEC0B89B283C00CC00041DC5 /* Photos.swift */,
+				CECAF6062837D9CC00258110 /* PhotosCollectionViewCell.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 		CEEC4A32298AB52100CDE39B /* Localizing */ = {
@@ -533,145 +365,43 @@
 			path = Themes;
 			sourceTree = "<group>";
 		};
-		CEFF058829C8A6DE00A21BD3 /* ProfileCoordinatorTests */ = {
+		CEF950992B1B33F300B4E52D /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				CEFF058929C8A6DE00A21BD3 /* ProfileCoordinatorTests.swift */,
+				CEF9509A2B1B341A00B4E52D /* FirebaseSigleton.swift */,
 			);
-			path = ProfileCoordinatorTests;
-			sourceTree = "<group>";
-		};
-		D367114465DACCC7A31A112D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A6F69F3405C09525E009341F /* Pods-StorageService.debug.xcconfig */,
-				21A0F5B5F879BF4D2A066533 /* Pods-StorageService.release.xcconfig */,
-				583D0DD21BD3F766B82D7C35 /* Pods-Diploma.debug.xcconfig */,
-				82C13CC63A00A8919BB3E30D /* Pods-Diploma.release.xcconfig */,
-			);
-			path = Pods;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		CECA1FD328814910000595A4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CECA1FDB28814911000595A4 /* StorageService.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		CEBF4CC529BF6C640084BC3E /* CheckerServiceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CEBF4CCC29BF6C660084BC3E /* Build configuration list for PBXNativeTarget "CheckerServiceTests" */;
-			buildPhases = (
-				CEBF4CC229BF6C640084BC3E /* Sources */,
-				CEBF4CC329BF6C640084BC3E /* Frameworks */,
-				CEBF4CC429BF6C640084BC3E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CEBF4CCB29BF6C650084BC3E /* PBXTargetDependency */,
-			);
-			name = CheckerServiceTests;
-			packageProductDependencies = (
-			);
-			productName = CheckerServiceTests;
-			productReference = CEBF4CC629BF6C640084BC3E /* CheckerServiceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CEBF4CEF29C1F4EE0084BC3E /* FeedCoordinatorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CEBF4CF629C1F4EF0084BC3E /* Build configuration list for PBXNativeTarget "FeedCoordinatorTests" */;
-			buildPhases = (
-				CEBF4CEC29C1F4EE0084BC3E /* Sources */,
-				CEBF4CED29C1F4EE0084BC3E /* Frameworks */,
-				CEBF4CEE29C1F4EE0084BC3E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CEBF4CF529C1F4EF0084BC3E /* PBXTargetDependency */,
-			);
-			name = FeedCoordinatorTests;
-			packageProductDependencies = (
-			);
-			productName = FeedCoordinatorTests;
-			productReference = CEBF4CF029C1F4EE0084BC3E /* FeedCoordinatorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CECA1FD728814910000595A4 /* StorageService */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CECA1FE028814911000595A4 /* Build configuration list for PBXNativeTarget "StorageService" */;
-			buildPhases = (
-				E0695E0DE0FD778FF7FAD70E /* [CP] Check Pods Manifest.lock */,
-				CECA1FD328814910000595A4 /* Headers */,
-				CECA1FD428814910000595A4 /* Sources */,
-				CECA1FD528814910000595A4 /* Frameworks */,
-				CECA1FD628814910000595A4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = StorageService;
-			productName = StorageService;
-			productReference = CECA1FD828814910000595A4 /* StorageService.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		CECD182727B83C8B00D89B3F /* Diploma */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CECD183C27B83C9000D89B3F /* Build configuration list for PBXNativeTarget "Diploma" */;
 			buildPhases = (
-				549B696E4CC624B776F1BAA7 /* [CP] Check Pods Manifest.lock */,
 				CECD182427B83C8B00D89B3F /* Sources */,
 				CECD182527B83C8B00D89B3F /* Frameworks */,
 				CECD182627B83C8B00D89B3F /* Resources */,
 				CECA1FE328814911000595A4 /* Embed Frameworks */,
-				7D27A3C14D44C24C3F035FBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CECA1FDD28814911000595A4 /* PBXTargetDependency */,
 			);
 			name = Diploma;
 			packageProductDependencies = (
 				CE8042C02A5C41BF00B69C70 /* iOSIntPackage */,
 				CE8042C62A5C42A000B69C70 /* Realm */,
 				CE8042C82A5C42A000B69C70 /* RealmSwift */,
-				CE8042CB2A5C435700B69C70 /* FirebaseAuth */,
-				CE8042CD2A5C435700B69C70 /* FirebaseStorage */,
+				CEEDCA332ACB1E3A009A94A7 /* FirebaseAuth */,
+				CEEDCA352ACB1E3A009A94A7 /* FirebaseDatabase */,
+				CEEDCA372ACB1E3A009A94A7 /* FirebaseDatabaseSwift */,
+				CEEDCA392ACB1E3A009A94A7 /* FirebaseStorage */,
 			);
 			productName = Navigation;
 			productReference = CECD182827B83C8B00D89B3F /* Diploma.app */;
 			productType = "com.apple.product-type.application";
-		};
-		CEFF058629C8A6DE00A21BD3 /* ProfileCoordinatorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CEFF058D29C8A6DE00A21BD3 /* Build configuration list for PBXNativeTarget "ProfileCoordinatorTests" */;
-			buildPhases = (
-				CEFF058329C8A6DE00A21BD3 /* Sources */,
-				CEFF058429C8A6DE00A21BD3 /* Frameworks */,
-				CEFF058529C8A6DE00A21BD3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CEFF058C29C8A6DE00A21BD3 /* PBXTargetDependency */,
-			);
-			name = ProfileCoordinatorTests;
-			packageProductDependencies = (
-			);
-			productName = ProfileCoordinatorTests;
-			productReference = CEFF058729C8A6DE00A21BD3 /* ProfileCoordinatorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -683,23 +413,8 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					CEBF4CC529BF6C640084BC3E = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = CECD182727B83C8B00D89B3F;
-					};
-					CEBF4CEF29C1F4EE0084BC3E = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = CECD182727B83C8B00D89B3F;
-					};
-					CECA1FD728814910000595A4 = {
-						CreatedOnToolsVersion = 13.1;
-					};
 					CECD182727B83C8B00D89B3F = {
 						CreatedOnToolsVersion = 13.1;
-					};
-					CEFF058629C8A6DE00A21BD3 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = CECD182727B83C8B00D89B3F;
 					};
 				};
 			};
@@ -716,281 +431,88 @@
 			packageReferences = (
 				CE8042BF2A5C41BF00B69C70 /* XCRemoteSwiftPackageReference "iOSIntPackage" */,
 				CE8042C52A5C42A000B69C70 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				CE8042CA2A5C435700B69C70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CEEDCA322ACB1E3A009A94A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CECD182927B83C8B00D89B3F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CEB18465296C998C00A26EF7 /* Products */;
-					ProjectRef = CEB18464296C998C00A26EF7 /* Pods.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CECD182727B83C8B00D89B3F /* Diploma */,
-				CECA1FD728814910000595A4 /* StorageService */,
-				CEBF4CC529BF6C640084BC3E /* CheckerServiceTests */,
-				CEBF4CEF29C1F4EE0084BC3E /* FeedCoordinatorTests */,
-				CEFF058629C8A6DE00A21BD3 /* ProfileCoordinatorTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		CE2150922A572990009B3D19 /* Pods-Diploma */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = "Pods-Diploma";
-			path = Pods_Diploma.framework;
-			remoteRef = CE2150912A572990009B3D19 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CEB1846D296C998D00A26EF7 /* Pods-StorageService */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = "Pods-StorageService";
-			path = Pods_StorageService.framework;
-			remoteRef = CEB1846C296C998D00A26EF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CEB1846F296C998D00A26EF7 /* SnapKit */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = SnapKit;
-			path = SnapKit.framework;
-			remoteRef = CEB1846E296C998D00A26EF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
-		CEBF4CC429BF6C640084BC3E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEBF4CEE29C1F4EE0084BC3E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CECA1FD628814910000595A4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CECD182627B83C8B00D89B3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CECD183827B83C9000D89B3F /* LaunchScreen.storyboard in Resources */,
 				CEEC4A2D298AB4C400CDE39B /* Localizable.strings in Resources */,
+				CE5C29202AA854E700D1A5FE /* GoogleService-Info.plist in Resources */,
 				CECD183527B83C9000D89B3F /* Assets.xcassets in Resources */,
 				CEEC4A39298BBF2700CDE39B /* Localizable.stringsdict in Resources */,
-				CE93B66A28FFF9F100B7E7FA /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEFF058529C8A6DE00A21BD3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		549B696E4CC624B776F1BAA7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Diploma-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7D27A3C14D44C24C3F035FBD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Diploma/Pods-Diploma-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Diploma/Pods-Diploma-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Diploma/Pods-Diploma-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E0695E0DE0FD778FF7FAD70E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StorageService-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		CEBF4CC229BF6C640084BC3E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CEBF4CC929BF6C650084BC3E /* CheckerServiceTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEBF4CEC29C1F4EE0084BC3E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CEBF4CF329C1F4EF0084BC3E /* FeedCoordinatorTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CECA1FD428814910000595A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CECD182427B83C8B00D89B3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC254B128BDEE9700FD6852 /* PostViewModel.swift in Sources */,
+				CEEDCA3C2ACBFE47009A94A7 /* SignUpViewController.swift in Sources */,
+				CED23B382A96497200CA1A93 /* JasonModel.swift in Sources */,
 				CE3D9C0C29E55EDE00DED357 /* LocalNotificationsServiceViewController.swift in Sources */,
+				CE5C29262AA8B60B00D1A5FE /* User.swift in Sources */,
 				CEB18463296C8FE000A26EF7 /* PostFavExtension.swift in Sources */,
-				CEC5B098289C2C050018A46D /* CurrentUserService.swift in Sources */,
 				CEC254A028B76ABE00FD6852 /* MainCoordinator.swift in Sources */,
 				CEC254A328B76BDC00FD6852 /* MainTabBarController.swift in Sources */,
-				CEC5B096289C2AE10018A46D /* TestUserService.swift in Sources */,
-				CE8042D92A6EC72D00B69C70 /* FeedHeaderView.swift in Sources */,
-				CECD184427BC401600D89B3F /* PostViewController.swift in Sources */,
 				CEB1845829675DF000A26EF7 /* Diploma.xcdatamodeld in Sources */,
-				CEC254B328BDEFE700FD6852 /* InfoViewModel.swift in Sources */,
-				CE02BA5E28AF85480084C663 /* FeedModel.swift in Sources */,
+				CED23B2D2A8241F500CA1A93 /* FeedHeaderTableViewCell.swift in Sources */,
+				CED23B292A7FEC7300CA1A93 /* PostViewController.swift in Sources */,
+				CED23B312A8637FC00CA1A93 /* FeedHeaderCollectionTableViewCell.swift in Sources */,
 				CEB18461296B565600A26EF7 /* FavoritesCoreData.swift in Sources */,
 				CED0730928A9212600DE68DD /* MyLoginFactory.swift in Sources */,
 				CEC254A928B777F500FD6852 /* ProfileCoordinator.swift in Sources */,
 				CEB1845F296B3C1400A26EF7 /* FavoritesTableViewController.swift in Sources */,
 				CE53E06A29CB5EB20057C281 /* LocalAuthorizationService.swift in Sources */,
 				CEEC4A46299A63D100CDE39B /* CustomColors.swift in Sources */,
+				CED23B3C2AA26DA100CA1A93 /* FeedHeaderCollectionView.swift in Sources */,
 				CECD182C27B83C8B00D89B3F /* AppDelegate.swift in Sources */,
-				CEC8627928CA241800799361 /* BruteForce.swift in Sources */,
 				CED0730328A8173200DE68DD /* LoginInspector.swift in Sources */,
 				CEC7D2F7290D5F460013E18D /* FileManagerTableViewController.swift in Sources */,
 				CECAF60328367EE700258110 /* PhotosTableViewCell.swift in Sources */,
 				CECAF6072837D9CC00258110 /* PhotosCollectionViewCell.swift in Sources */,
+				CEF9509B2B1B341A00B4E52D /* FirebaseSigleton.swift in Sources */,
 				CEDE0BC728DED73800BD3C7C /* ProfileModel.swift in Sources */,
-				CED0730128A813AD00DE68DD /* Checker.swift in Sources */,
 				CE094ACA27CFA1860076C5A8 /* ProfileHeaderView.swift in Sources */,
-				CE75098A289826D1004F76B6 /* User.swift in Sources */,
-				CEC254AB28B7905100FD6852 /* ViewControllerFactory.swift in Sources */,
 				CEC0B89C283C00CC00041DC5 /* Photos.swift in Sources */,
-				CEB1845B296AF22400A26EF7 /* FavoritesCell.swift in Sources */,
 				CEC171D6280C60F200C0B95E /* LogInViewController.swift in Sources */,
-				CE89E04228F41E10007F321E /* NetworkService.swift in Sources */,
-				CECD184627C16E1A00D89B3F /* InfoViewController.swift in Sources */,
 				CED0730728A920AD00DE68DD /* LoginFactory.swift in Sources */,
 				CE0E1D4A294DA65A00AFA1D9 /* LoginRealmModel.swift in Sources */,
+				CED23B362A96496200CA1A93 /* NetworkService.swift in Sources */,
 				CE93B66C2900596100B7E7FA /* CheckerService.swift in Sources */,
 				CECA8712293E4DDF004CB840 /* CustomAlert.swift in Sources */,
-				CEDF761129841BBC002A1267 /* MapViewController.swift in Sources */,
-				CEC254AF28BAA2C800FD6852 /* FeedViewModel.swift in Sources */,
 				CECD184027BAE36400D89B3F /* FeedViewController.swift in Sources */,
 				CE3D9C5229E8434D00DED357 /* SceneDelegate.swift in Sources */,
 				CEEC4A44299A61AF00CDE39B /* ColorExtension.swift in Sources */,
 				CEEC4A34298AB55100CDE39B /* ExtensionForLocalizing.swift in Sources */,
 				CEC254A528B76CA300FD6852 /* NavControllerFactory.swift in Sources */,
 				CEC254AC28BAA24500FD6852 /* Post.swift in Sources */,
-				CEC5B094289C2AAA0018A46D /* UserService.swift in Sources */,
 				CE02BA5B28AE9D8E0084C663 /* CustomButton.swift in Sources */,
 				CE094ACE27CFA1F20076C5A8 /* ProfileViewController.swift in Sources */,
 				CECAF6052837CCCF00258110 /* PhotosViewController.swift in Sources */,
 				CE9E34E1293CA73800FC1428 /* PasswordView.swift in Sources */,
+				CED23B2F2A83C92000CA1A93 /* UIImageExtension.swift in Sources */,
 				CEC254A728B777DD00FD6852 /* FeedCoordinator.swift in Sources */,
 				CE9E34E3293CABB800FC1428 /* SettingsTableViewController.swift in Sources */,
-				CE6F109E28F893F100DDCB67 /* JasonModel.swift in Sources */,
-				CEC8627B28CA273000799361 /* GenerateRandomPassword.swift in Sources */,
 				CEBC07CA2822CE50009B3AC4 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEFF058329C8A6DE00A21BD3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CEFF058A29C8A6DE00A21BD3 /* ProfileCoordinatorTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CEBF4CCB29BF6C650084BC3E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CECD182727B83C8B00D89B3F /* Diploma */;
-			targetProxy = CEBF4CCA29BF6C650084BC3E /* PBXContainerItemProxy */;
-		};
-		CEBF4CF529C1F4EF0084BC3E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CECD182727B83C8B00D89B3F /* Diploma */;
-			targetProxy = CEBF4CF429C1F4EF0084BC3E /* PBXContainerItemProxy */;
-		};
-		CECA1FDD28814911000595A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilter = ios;
-			target = CECA1FD728814910000595A4 /* StorageService */;
-			targetProxy = CECA1FDC28814911000595A4 /* PBXContainerItemProxy */;
-		};
-		CEFF058C29C8A6DE00A21BD3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CECD182727B83C8B00D89B3F /* Diploma */;
-			targetProxy = CEFF058B29C8A6DE00A21BD3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CECD183627B83C9000D89B3F /* LaunchScreen.storyboard */ = {
@@ -1023,160 +545,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CEBF4CCD29BF6C660084BC3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FYSS8G4VY5;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DG.CheckerServiceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diploma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Diploma";
-			};
-			name = Debug;
-		};
-		CEBF4CCE29BF6C660084BC3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FYSS8G4VY5;
-				FRAMEWORK_SEARCH_PATHS = "$(Dir";
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DG.CheckerServiceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diploma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Diploma";
-			};
-			name = Release;
-		};
-		CEBF4CF729C1F4EF0084BC3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FYSS8G4VY5;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DG.FeedCoordinatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diploma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Diploma";
-			};
-			name = Debug;
-		};
-		CEBF4CF829C1F4EF0084BC3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FYSS8G4VY5;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DG.FeedCoordinatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diploma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Diploma";
-			};
-			name = Release;
-		};
-		CECA1FE128814911000595A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6F69F3405C09525E009341F /* Pods-StorageService.debug.xcconfig */;
-			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FYSS8G4VY5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
-				PRODUCT_BUNDLE_IDENTIFIER = DG.StorageService;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CECA1FE228814911000595A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21A0F5B5F879BF4D2A066533 /* Pods-StorageService.release.xcconfig */;
-			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FYSS8G4VY5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
-				PRODUCT_BUNDLE_IDENTIFIER = DG.StorageService;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		CECD183A27B83C9000D89B3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1302,7 +670,6 @@
 		};
 		CECD183D27B83C9000D89B3F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 583D0DD21BD3F766B82D7C35 /* Pods-Diploma.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1344,7 +711,6 @@
 		};
 		CECD183E27B83C9000D89B3F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82C13CC63A00A8919BB3E30D /* Pods-Diploma.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1384,76 +750,9 @@
 			};
 			name = Release;
 		};
-		CEFF058E29C8A6DE00A21BD3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FYSS8G4VY5;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DG.ProfileCoordinatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diploma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Diploma";
-			};
-			name = Debug;
-		};
-		CEFF058F29C8A6DE00A21BD3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FYSS8G4VY5;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DG.ProfileCoordinatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diploma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Diploma";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEBF4CCC29BF6C660084BC3E /* Build configuration list for PBXNativeTarget "CheckerServiceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CEBF4CCD29BF6C660084BC3E /* Debug */,
-				CEBF4CCE29BF6C660084BC3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CEBF4CF629C1F4EF0084BC3E /* Build configuration list for PBXNativeTarget "FeedCoordinatorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CEBF4CF729C1F4EF0084BC3E /* Debug */,
-				CEBF4CF829C1F4EF0084BC3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CECA1FE028814911000595A4 /* Build configuration list for PBXNativeTarget "StorageService" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CECA1FE128814911000595A4 /* Debug */,
-				CECA1FE228814911000595A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		CECD182327B83C8B00D89B3F /* Build configuration list for PBXProject "Diploma" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1468,15 +767,6 @@
 			buildConfigurations = (
 				CECD183D27B83C9000D89B3F /* Debug */,
 				CECD183E27B83C9000D89B3F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CEFF058D29C8A6DE00A21BD3 /* Build configuration list for PBXNativeTarget "ProfileCoordinatorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CEFF058E29C8A6DE00A21BD3 /* Debug */,
-				CEFF058F29C8A6DE00A21BD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1500,7 +790,7 @@
 				kind = branch;
 			};
 		};
-		CE8042CA2A5C435700B69C70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		CEEDCA322ACB1E3A009A94A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -1526,14 +816,24 @@
 			package = CE8042C52A5C42A000B69C70 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
-		CE8042CB2A5C435700B69C70 /* FirebaseAuth */ = {
+		CEEDCA332ACB1E3A009A94A7 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE8042CA2A5C435700B69C70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CEEDCA322ACB1E3A009A94A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		CE8042CD2A5C435700B69C70 /* FirebaseStorage */ = {
+		CEEDCA352ACB1E3A009A94A7 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE8042CA2A5C435700B69C70 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = CEEDCA322ACB1E3A009A94A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		CEEDCA372ACB1E3A009A94A7 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEEDCA322ACB1E3A009A94A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		CEEDCA392ACB1E3A009A94A7 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEEDCA322ACB1E3A009A94A7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */

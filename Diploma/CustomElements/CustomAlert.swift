@@ -61,8 +61,10 @@ final class CustomAlert {
     
     func createAlertWithTwoCompletion(title: String?, message: String?, placeholder: String?, titleAction1: String?, action1: @escaping () -> Void, titleAction2: String?, action2: @escaping () -> Void) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addTextField { text in
-            text.placeholder = placeholder
+        if placeholder != nil {
+            alertController.addTextField { text in
+                text.placeholder = placeholder
+            }
         }
         
         let alertAction1 = UIAlertAction(title: titleAction1, style: .default) { UIAlertAction in

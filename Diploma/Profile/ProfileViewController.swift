@@ -7,29 +7,50 @@
 
 import UIKit
 
-import StorageService
+import CoreData
+import FirebaseAuth
+import FirebaseDatabase
 
-final class ProfileViewController: UIViewController {
+protocol ProfileViewControllerProtocol: AnyObject {
+    func logout()
+}
+
+final class ProfileViewController: UIViewController, ProfileViewControllerProtocol {
     
     //MARK: - let and var
-    let favoritesCell =  FavoritesCell()
     let coordinator: ProfileCoordinatorProtocol
-    let controller: LogInViewController
-    var userService: UserService
-    var userName: String
-    private var postDataArray = postData.postDataArray
+    
     private var postPhotoName = ["1", "2", "3", "4"]
+
+    var fetchResultsController: NSFetchedResultsController<PostProfile>!
+    var fetchResultsControllerForAvatar: NSFetchedResultsController<DCurUser>!
     
     lazy var profileHeaderView: ProfileHeaderView = {
-        let profileHeader = ProfileHeaderView(controller: controller, currentController: self)
+        let profileHeader = ProfileHeaderView()
+        profileHeader.delegate = self
         profileHeader.translatesAutoresizingMaskIntoConstraints = false
         return profileHeader
     }()
     
-    let avatarImageView: UIImageView = {
+    lazy var avatarImageView: UIImageView = {
         let avatar = UIImageView()
-        let avatarImage = UIImage(named: "Avatar.jpeg")
-        avatar.image = avatarImage
+//        let avatarImage: UIImage
+//
+//        let data = fetchResultsControllerForAvatar.object(at: IndexPath(row: 0, section: 0))
+//
+//        if let data = try? Data(contentsOf: URL(string: data.avatarImage!)!), let image = UIImage(data: data) {
+//            avatarImage = image
+//        } else {
+//            avatarImage = UIImage(systemName: "figure.snowboarding")!
+//        }
+        
+      
+//        if FavoritesCoreData.shared.user.isEmpty == false, let dataForAvatarImage = FavoritesCoreData.shared.user[0].avatarImage {
+//            avatarImage = UIImage(data: dataForAvatarImage)!
+//        } else {
+//            avatarImage = UIImage(systemName: "figure.snowboarding")!
+//        }
+//        avatar.image = avatarImage
         avatar.layer.borderColor = CustomColors.customGray.cgColor
         avatar.layer.borderWidth = 3
         avatar.clipsToBounds = true
@@ -64,17 +85,9 @@ final class ProfileViewController: UIViewController {
             [weak self] in
             self?.xButtonAnimate()
         })
-    
-    // добавил условия для запуска дла дебаг схемы и для рилиз схемы
-    
+        
     let profileTableView: UITableView = {
         let profileTable = UITableView()
-        
-#if DEBUG
-        profileTable.backgroundColor = .red
-#else
-        profileTable.backgroundColor = .green
-#endif
         profileTable.dragInteractionEnabled = true
         profileTable.translatesAutoresizingMaskIntoConstraints = false
         return profileTable
@@ -99,11 +112,8 @@ final class ProfileViewController: UIViewController {
     let xButtonAnimation = UIViewPropertyAnimator(duration: 0.3, curve: .easeInOut, animations: nil)
     
     //MARK: - init
-    init(userService: UserService, userName: String, coordinator: ProfileCoordinatorProtocol, controller: LogInViewController) {
-        self.userService = userService
-        self.userName = userName
+    init(coordinator: ProfileCoordinatorProtocol) {
         self.coordinator = coordinator
-        self.controller = controller
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) {
@@ -112,42 +122,55 @@ final class ProfileViewController: UIViewController {
     
     
     //MARK: - func
+    
+    func logout() {
+        coordinator.loginViewController(coordinator: coordinator)
+    }
+    
+    private func fullfillProfile() {
+        
+        let data = fetchResultsControllerForAvatar.object(at: IndexPath(row: 0, section: 0))
+        
+        guard let url = URL(string: data.avatarImage!) else {return}
+        
+        NetworkService.requestForAvatar(url: url) { image in
+            DispatchQueue.main.async { [weak self] in
+                self!.avatarImageView.image = image
+                self!.profileHeaderView.fullNameLabel.text = data.name
+                self!.view.layoutIfNeeded()
+            }
+        }
+       
+    }
+    
+    func initFetchResultsController() {
+        let request = PostProfile.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "author", ascending: false)]
+        
+        let fetchResultsControllerToDeliver = NSFetchedResultsController(fetchRequest: request, managedObjectContext: FavoritesCoreData.shared.contextBackground, sectionNameKeyPath: nil, cacheName: nil)
+        
+        try? fetchResultsControllerToDeliver.performFetch()
+        
+        fetchResultsController = fetchResultsControllerToDeliver
+        fetchResultsController.delegate = self
+
+    }
+    
+    func initFetchResultsControllerForAvatar() {
+        let request = DCurUser.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: false)]
+        
+        let fetchResultsControllerToDeliver = NSFetchedResultsController(fetchRequest: request, managedObjectContext: FavoritesCoreData.shared.contextBackground, sectionNameKeyPath: nil, cacheName: nil)
+        
+        try? fetchResultsControllerToDeliver.performFetch()
+        
+        fetchResultsControllerForAvatar = fetchResultsControllerToDeliver
+        fetchResultsController.delegate = self
+
+    }
+    
+    
     @objc private func avatarChanging () {
-        
-        //MARK: - Анимация при помощи KeyFrames
-        //        UIView.animateKeyframes(withDuration: 5, delay: 0, options: []) {
-        //
-        //            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 3.0) {
-        //                self.setAvatarImageViewAndTransparentViewToView()
-        //                self.avatarImageView.layer.cornerRadius = 0
-        //                self.view.layoutIfNeeded()
-        //            }
-        //
-        //            UIView.addKeyframe(withRelativeStartTime: 3.0, relativeDuration: 2.0) {
-        //                self.setXButtonToView()
-        //                self.view.layoutIfNeeded()
-        //            }
-        //        } completion: {_ in
-        //        }
-        
-        //MARK: - Анимация при помощи UIView.animate
-        // UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveLinear) {
-        //            self.setAvatarImageViewAndTransparentViewToView()
-        //            self.avatarImageView.layer.cornerRadius = 0
-        //            self.view.layoutIfNeeded()
-        //
-        //        } completion: { _ in
-        //
-        //        }
-        //
-        //        UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveLinear) {
-        //            self.setXButtonToView()
-        //            self.view.layoutIfNeeded()
-        //        } completion: { _ in
-        //
-        //        }
-        
-        //MARK: Анимация при помощи UIViewPropertyAnimator
         
         avatarAnimation.addAnimations {
             self.setAvatarImageViewAndTransparentViewToView()
@@ -173,12 +196,6 @@ final class ProfileViewController: UIViewController {
         avatarImageViewLeading = avatarImageView.leadingAnchor.constraint(equalTo: profileHeaderView.leadingAnchor, constant: 16)
         avatarImageViewWidth = avatarImageView.widthAnchor.constraint(equalToConstant: 110)
         avatarImageViewHeight = avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor)
-        
-        // принимаю результат функции userInfo за UserService и присваиваю аватар, имя и статус пользователя avatarImageView и profileHeaderView
-        let loginedUser = userService.userInfo(name: userName)
-        avatarImageView.image = loginedUser?.avatar
-        profileHeaderView.fullNameLabel.text = loginedUser?.name
-        profileHeaderView.statusLabel.text = loginedUser?.status
         
         
         NSLayoutConstraint.activate([
@@ -238,7 +255,6 @@ final class ProfileViewController: UIViewController {
         self.profileTableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: ProfileHeaderView.self))
         self.profileTableView.register(PhotosTableViewCell.self, forCellReuseIdentifier: String(describing: PhotosTableViewCell.self))
         self.profileTableView.register(PostTableViewCell.self, forCellReuseIdentifier: String(describing: PostTableViewCell.self))
-        profileTableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: FavoritesCell.self))
    //     profileTableView.rowHeight = UITableView.automaticDimension
         profileTableView.estimatedRowHeight = 310
         
@@ -265,51 +281,58 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(profileTableView)
+        initFetchResultsController()
+        initFetchResultsControllerForAvatar()
         setTable()
         setAvatarImageViewToProfileView()
 //         this method maybe create bounds which are consequently used in viewWillAppear by setRadius
         self.view.layoutIfNeeded()
+        fullfillProfile()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setRadius()
+        initFetchResultsController()
+        profileTableView.reloadData()
+        initFetchResultsControllerForAvatar()
+        profileHeaderView.layoutIfNeeded()
+        
     }
-    
+
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
     
     // rows quantity
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionNumber = section
-        if sectionNumber == 0 || sectionNumber == 1 || sectionNumber == 3 {
-            return 1
-        } else if sectionNumber == 2 {
-            return (postDataArray.count)
+        let number: Int
+        if section == 0 || section == 1 {
+            number = 1
+        } else if section == 2 {
+            number = fetchResultsController.sections?[0].numberOfObjects ?? 0
+        } else {
+            number = 0
         }
-        return sectionNumber
+        return number
     }
     
-    // cell configuration
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProfileHeaderView.self), for: indexPath)
             
-            //надо добавлять не на cell, а на cell.contentView, иначе contentView при первом показе перекрывает view и она неактивна
             cell.contentView.addSubview(profileHeaderView)
             NSLayoutConstraint.activate([
                 profileHeaderView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
                 profileHeaderView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor),
                 profileHeaderView.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
                 profileHeaderView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
-          //      profileHeaderView.heightAnchor.constraint(equalToConstant: 220)
             ])
            
             return cell
@@ -326,19 +349,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             }
             return cell
             
-        } else if indexPath.section == 3 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FavoritesCell.self), for: indexPath)
-            
-            cell.contentView.addSubview(favoritesCell)
-            NSLayoutConstraint.activate([
-                favoritesCell.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
-                favoritesCell.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor),
-                favoritesCell.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
-                favoritesCell.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
-            ])
-            
-            return cell
-            
         } else {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: String(describing: PostTableViewCell.self),
@@ -347,8 +357,22 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             
-            let data = postDataArray[indexPath.row]
-            cell.post = data
+            let data = fetchResultsController.object(at: IndexPath(row: indexPath.row, section: 0))
+
+        let dataPost = Post(author: data.author!, avatarImage: data.avatarImage, descriptionOfPost: data.descriptionOfPost!, image: data.image, likes: data.likes, views: data.views)
+                        
+            DispatchQueue.global().async {
+                NetworkService.loadImage(linkAvatar: dataPost.avatarImage, linkImage: dataPost.image) { avatar, image in
+                    if let avatar = avatar, let image = image {
+                        DispatchQueue.main.async {
+                            cell.post = dataPost
+                            cell.avatarImage.image = avatar
+                            cell.postImage.image = image
+                        }
+                    }
+                }
+            }
+            
             
             cell.tapAddToFavorites = { [weak self] cell in
                 
@@ -356,7 +380,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 var searchFlag = false
                 for postSaved in FavoritesCoreData.shared.posts {
-                    if postSaved.author == post.author, postSaved.descriptionOfPost == post.descriptionOfPost, postSaved.image == post.image?.jpegData(compressionQuality: 1.0) {
+                    if postSaved.author == post.author, postSaved.descriptionOfPost == post.descriptionOfPost, postSaved.image == post.image {
                         searchFlag = true
                     }
                 }
@@ -378,9 +402,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
             coordinator.photosViewController(profileViewController: self)
-        } else if indexPath.section == 3 {
-  
-            coordinator.favoritesTableViewController()
         }
     }
     
@@ -394,7 +415,51 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         return height
     }
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if indexPath.section == 2 {
+            let actionDelete = UIContextualAction(style: .destructive, title: "Delete") { actionDelete, swipeButtonView, completion in
+                let post = self.fetchResultsController.object(at: IndexPath(row: indexPath.row, section: 0))
+                FavoritesCoreData.shared.deletePost(post: post)
+                completion(true)
+            }
+            let swipeConfiguration = UISwipeActionsConfiguration(actions: [actionDelete])
+            swipeConfiguration.performsFirstActionWithFullSwipe = true
+            return swipeConfiguration
+        } else {
+            let swipeConfigurationEmpty = UISwipeActionsConfiguration()
+            return swipeConfigurationEmpty
+        }
+       
+    }
+    
 }
+
+extension ProfileViewController: NSFetchedResultsControllerDelegate {
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+            DispatchQueue.main.async { [weak self] in
+                switch type {
+                case .insert:
+                    guard let newIndexPath = newIndexPath else { return }
+                    self!.profileTableView.insertRows(at: [IndexPath(row: newIndexPath.row, section: 2)], with: .automatic)
+                case .delete:
+                    guard let indexPath = indexPath else { return }
+                    self!.profileTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 2)], with: .automatic)
+                case .move:
+                    guard let indexPath = indexPath, let newIndexPath = newIndexPath else { return }
+                    self!.profileTableView.moveRow(at: IndexPath(row: indexPath.row, section: 2), to: IndexPath(row: newIndexPath.row, section: 2))
+                case .update:
+                    guard let indexPath = indexPath else { return }
+                    self!.profileTableView.reloadRows(at: [IndexPath(row: indexPath.row, section: 2)], with: .automatic)
+                @unknown default:
+                    print("Fatal error")
+                }
+            }
+        
+    }
+}
+
+
 
 extension ProfileViewController: UITableViewDragDelegate, UITableViewDropDelegate {
     
@@ -406,15 +471,30 @@ extension ProfileViewController: UITableViewDragDelegate, UITableViewDropDelegat
         
         guard indexPath.row != 0 else { return []} // why
         
-        let post = postDataArray[indexPath.row]
+//        let data = fetchResultsController.object(at: IndexPath(row: indexPath.row, section: 0))
+//        let image: UIImage
+//        let avatarImage: UIImage
+//        if let dataForImage = data.image, let dataForAvatarImage = data.avatarImage {
+//            image = UIImage(data: dataForImage)!
+//            avatarImage = UIImage(data: dataForAvatarImage)!
+//        } else {
+//            image = UIImage(named: "No_image_available")!
+//            avatarImage = UIImage(named: "No_image_available")!
+//        }
+//
+//    let dataPost = Post(author: data.author!, avatarImage: avatarImage, descriptionOfPost: data.descriptionOfPost!, image: image, likes: data.likes, views: data.views)
         
-        let dragItemProviderImage = NSItemProvider(object: post.image ?? UIImage(named: "No_image_available")!)
+        guard let cell = tableView.cellForRow(at: indexPath) as? PostTableViewCell else {return []}
+        let imageToManipulate = cell.avatarImage.image
+        let textToManipulate = cell.descriprionLabel.text
+        
+        let dragItemProviderImage = NSItemProvider(object: imageToManipulate ?? UIImage(named: "No_image_available")!)
         let dragItemImage = UIDragItem(itemProvider: dragItemProviderImage)
-        dragItemImage.localObject = post.image // ?? why, I don't know
+        dragItemImage.localObject = imageToManipulate // ?? why, I don't know
 
-        let dragItemProviderName = NSItemProvider(object: (post.descriptionOfPost ?? "No descriprion")! as NSItemProviderWriting)
+        let dragItemProviderName = NSItemProvider(object: (textToManipulate ?? "No descriprion")! as NSItemProviderWriting)
         let dragItemName = UIDragItem(itemProvider: dragItemProviderName)
-        dragItemName.localObject = post.descriptionOfPost // ?? why
+        dragItemName.localObject = textToManipulate // ?? why
         
         return [dragItemImage, dragItemName]
             
@@ -490,14 +570,14 @@ extension ProfileViewController: UITableViewDragDelegate, UITableViewDropDelegat
         
         group.notify(queue: .main) {
             if coordinator.proposal.operation == .move {
-                self.postDataArray.remove(at: rowInd)
+                let post = self.fetchResultsController.object(at: IndexPath(row: rowInd, section: 0))
+                FavoritesCoreData.shared.deletePost(post: post)
             }
-            let newPost = Post(author: "Drag&Drop", descriptionOfPost: postDescription, image: postImage, likes: 0, views: 0)
-            self.postDataArray.insert(newPost, at: rowInd)
+            let newPost = Post(author: "Drag&Drop", avatarImage: nil, descriptionOfPost: postDescription, image: nil, likes: 0, views: 0)
+            FavoritesCoreData.shared.addPostProfile(post: newPost)
             tableView.reloadData()
         }
     }
     
-    
-    
 }
+

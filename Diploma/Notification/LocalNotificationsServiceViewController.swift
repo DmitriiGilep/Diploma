@@ -72,7 +72,7 @@ final class LocalNotificationsServiceViewController: UIViewController, UNUserNot
             guard let navController = tabBarController.selectedViewController as? UINavigationController else {return}
             profileCoordinator.navController = navController
             if LoginRealmModel.shared.status.status {
-                profileCoordinator.profileViewController(coordinator: profileCoordinator, controller: loginViewController, navControllerFromFactory: nil)
+                profileCoordinator.profileViewController(coordinator: profileCoordinator, navControllerFromFactory: nil)
             } else {
                 navController.pushViewController(loginViewController, animated: true)
             }

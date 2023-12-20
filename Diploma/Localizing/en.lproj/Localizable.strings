@@ -27,7 +27,7 @@
 "insert_password" = "Insert a password";
 "check" = "Check";
 "password_prompt_descript" = "Green if true, red if false";
-"postButton1" = "PostButton1";
+"post" = "Post";
 "mapView" = "MapView";
 "feedView" = "FeedView";
 "secretWord" = "password";
@@ -79,15 +79,18 @@
 "unknown_error" = "Unknown error";
 "no_images_in_collection" = "No images in the collection";
 "post_not_added" = "The post hasn't been added";
+"writeYourPost" = "Write you post here";
 "post_already_contained" = "The favorites has already contained the post";
 "photos" = "Photos";
 "photo_gallery" = "Photo Gallery";
 "failure_registration" = "Registration failure";
 "user_existed_something_wrong" = "The user has already exist or something wrong with the login or the password";
 "successful_registrarion" = "Registration is successful";
+"successful_signIn" = "Successful signIn";
 "user_registered" = "The user has been successfully registered";
 "favorites" = "Favorites";
 "no_posts_favorites" = "No posts in the favorites";
+"no_posts_feed" = "No posts in the feed";
 "search_criteria" = "Search criteria";
 "apply" = "Apply";
 "search" = "Search";
@@ -107,10 +110,15 @@
 "enterPassword" = "Enter App password";
 "touchMeNot" = "Touch me not";
 "FaceIDTouchIDnotConfigured" = "Face ID / Touch ID may not be configured";
+"useFaceID" = "Use Face ID?" ;
 "success" = "Success";
 "successAuthentication" = "Authentication is successful";
 "look_update" = "Look at last updates";
 "update" = "Update";
+"no" = "No";
+"username" = "Username";
+"logIn" = "LogIn?";
+"signUp" = "SignUp?";
 
 
 

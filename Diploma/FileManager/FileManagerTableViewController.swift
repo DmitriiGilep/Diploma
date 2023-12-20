@@ -104,10 +104,9 @@ final class FileManagerTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        self.navigationItem.title = "directory".localizable
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "add_photo".localizable, style: .done, target: self, action: #selector(addPhoto))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "settings".localizable, style: .plain, target: self, action: #selector(launchSettingsTableViewController))
+        navigationItem.title = "directory".localizable
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "add_photo".localizable, style: .done, target: self, action: #selector(addPhoto))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "settings".localizable, style: .plain, target: self, action: #selector(launchSettingsTableViewController))
         
         sortStatus = UserDefaults.standard.bool(forKey: "sortStatus")
   

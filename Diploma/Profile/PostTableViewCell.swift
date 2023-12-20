@@ -7,8 +7,6 @@
 
 import UIKit
 
-import StorageService
-
 
 final class PostTableViewCell: UITableViewCell {
     
@@ -24,8 +22,8 @@ final class PostTableViewCell: UITableViewCell {
     
     var post: PostProtocol? {
         didSet {
+            
             authorLabel.text = post?.author
-            postImage.image = post?.image ?? UIImage(named: "No_image_available")
             descriprionLabel.text = post?.descriptionOfPost
             let formattedLikes = String(format: "likes".localizable, post?.likes ?? 0)
             likesLabel.text = formattedLikes
@@ -41,6 +39,14 @@ final class PostTableViewCell: UITableViewCell {
         author.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         author.translatesAutoresizingMaskIntoConstraints = false
         return author
+    }()
+    
+    let avatarImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = 25
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     let postImage: UIImageView = {
@@ -92,6 +98,7 @@ final class PostTableViewCell: UITableViewCell {
     private func setViews() {
         
         self.addSubview(authorLabel)
+        self.addSubview(avatarImage)
         self.addSubview(postImage)
         self.addSubview(descriprionLabel)
         self.addSubview(likesLabel)
@@ -99,30 +106,35 @@ final class PostTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate(
             [
-                self.authorLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
-                self.authorLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
-                self.authorLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-                self.authorLabel.heightAnchor.constraint(equalToConstant: 50),
+                avatarImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+                avatarImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+                avatarImage.widthAnchor.constraint(equalToConstant: 50),
+                avatarImage.heightAnchor.constraint(equalToConstant: 50),
                 
-                self.postImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-                self.postImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-                self.postImage.topAnchor.constraint(equalTo: self.authorLabel.bottomAnchor, constant: 5),
+                authorLabel.leadingAnchor.constraint(equalTo: self.avatarImage.trailingAnchor, constant: 5),
+                authorLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
+                authorLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+                authorLabel.heightAnchor.constraint(equalToConstant: 50),
+                
+                postImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                postImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+                postImage.topAnchor.constraint(equalTo: self.authorLabel.bottomAnchor, constant: 5),
                 //self.postImage.bottomAnchor.constraint(equalTo: self.descriprionLabel.topAnchor, constant: -5),
-                self.postImage.heightAnchor.constraint(equalToConstant: 200),
+                postImage.heightAnchor.constraint(equalToConstant: 200),
                 
-                self.descriprionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
-                self.descriprionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
-                self.descriprionLabel.topAnchor.constraint(equalTo: postImage.bottomAnchor, constant: 5),
-                self.descriprionLabel.bottomAnchor.constraint(equalTo: self.likesLabel.topAnchor, constant: -5),
+                descriprionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+                descriprionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
+                descriprionLabel.topAnchor.constraint(equalTo: postImage.bottomAnchor, constant: 5),
+                descriprionLabel.bottomAnchor.constraint(equalTo: self.likesLabel.topAnchor, constant: -5),
                 
-                self.likesLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
-                self.likesLabel.topAnchor.constraint(equalTo: self.descriprionLabel.bottomAnchor, constant: 5),
-                self.likesLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-                self.likesLabel.widthAnchor.constraint(equalToConstant: 150),
+                likesLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+                likesLabel.topAnchor.constraint(equalTo: self.descriprionLabel.bottomAnchor, constant: 5),
+                likesLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+                likesLabel.widthAnchor.constraint(equalToConstant: 150),
                 
-                self.viewsLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
-                self.viewsLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-                self.viewsLabel.widthAnchor.constraint(equalToConstant: 200)
+                viewsLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
+                viewsLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+                viewsLabel.widthAnchor.constraint(equalToConstant: 200)
             ]
         )
     }

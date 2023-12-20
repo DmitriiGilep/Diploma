@@ -134,7 +134,7 @@ final class PasswordView {
             kSecClass: kSecClassGenericPassword,
             kSecValueData: passData,
             kSecAttrAccount: login
-        ] as CFDictionary
+        ] as [CFString : Any] as CFDictionary
         
         let status = SecItemAdd(attribute, nil)
         
@@ -161,7 +161,7 @@ final class PasswordView {
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: login,
             kSecReturnData: true
-        ] as CFDictionary
+        ] as [CFString : Any] as CFDictionary
         
         var extractedData: AnyObject?
         
@@ -212,7 +212,7 @@ final class PasswordView {
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: self.login,
             kSecReturnData: false
-        ] as CFDictionary
+        ] as [CFString : Any] as CFDictionary
         
         let attribute = [
             kSecValueData: passData

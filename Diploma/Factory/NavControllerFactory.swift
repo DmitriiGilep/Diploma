@@ -18,6 +18,8 @@ final class NavControllerFactory {
         case third
     }
     
+    var id: String?
+    
     var navController = UINavigationController()
     private let navControllerName: NavControllerName
     
@@ -35,10 +37,8 @@ final class NavControllerFactory {
         switch navControllerName {
         case .first:
             let feedCoordinator = FeedCoordinator()
-            let feedViewModel = FeedViewModel()
             let feedViewController = FeedViewController()
             feedViewController.coordinator = feedCoordinator
-            feedViewController.feedViewModel = feedViewModel
             feedCoordinator.navController = navController
             navController.setViewControllers([feedViewController], animated: true)
             
@@ -47,17 +47,25 @@ final class NavControllerFactory {
             tabBar1.image = UIImage(systemName: "house")
             navController.tabBarItem = tabBar1
             
-        case .second:
             
+        case .second:
             let profileCoordinator = ProfileCoordinator()
-            let loginViewController = LogInViewController(coordinator: profileCoordinator)
-            let myLoginFactory = MyLoginFactory()
-            loginViewController.delegate = myLoginFactory.loginInspector()
             profileCoordinator.navController = navController
-            navController.setViewControllers([loginViewController], animated: true)
- 
-            if LoginRealmModel.shared.status.status {
-                profileCoordinator.profileViewController(coordinator: profileCoordinator, controller: loginViewController, navControllerFromFactory: navController)
+            
+           let myLoginFactory = MyLoginFactory()
+
+            if FavoritesCoreData.shared.user.isEmpty == false {
+                
+                let loginViewController = LogInViewController(coordinator: profileCoordinator)
+                loginViewController.delegate = myLoginFactory.loginInspector()
+                navController.setViewControllers([loginViewController], animated: true)
+                
+            } else {
+                
+                let signUpViewController = SignUpViewController(coordinator: profileCoordinator)
+                signUpViewController.delegate = myLoginFactory.loginInspector()
+                navController.setViewControllers([signUpViewController], animated: true)
+                
             }
             navController.navigationBar.isHidden = true
             
@@ -67,10 +75,11 @@ final class NavControllerFactory {
             navController.tabBarItem = tabBar2
             
         case .third:
-            let fileManagerTableViewController = FileManagerTableViewController(style: .plain)
+            let favoritesTableViewController = FavoritesTableViewController()
+            navController.navigationBar.isHidden = false
             navController.navigationBar.barStyle = .default
-            navController.setViewControllers([fileManagerTableViewController], animated: true)
-            navController.tabBarItem = UITabBarItem(title: "fileManager".localizable, image: UIImage(systemName: "photo"), selectedImage: nil)
+            navController.setViewControllers([favoritesTableViewController], animated: true)
+            navController.tabBarItem = UITabBarItem(title: "favorites".localizable, image: UIImage(systemName: "star"), selectedImage: nil)
         }
     }
     

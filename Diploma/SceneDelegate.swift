@@ -6,26 +6,24 @@
 //
 
 import UIKit
+import FirebaseCore
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     let localNotificationsServiceViewController = LocalNotificationsServiceViewController()
-    // объявил свойство конфигурации
-    var appConfiguration: AppConfiguration?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        // инициализировал кейсом ref1
-        appConfiguration = AppConfiguration.ref1
         localNotificationsServiceViewController.registerForLatestUpdatesIfPossible()
-        
+        FirebaseApp.configure()
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let mainCoordinator = MainCoordinator()
         window.rootViewController = mainCoordinator.startApplication()
         self.window = window
         window.makeKeyAndVisible()
+
 
     }
 
