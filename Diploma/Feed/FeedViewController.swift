@@ -21,6 +21,8 @@ final class FeedViewController: UIViewController {
     weak var delegate: FeedControllerDelegate?
     var fetchResultsController: NSFetchedResultsController<PostFeed>!
     
+    var postsToPresent: [PostToPresent] = []
+    
     let feedTableView: UITableView = {
         let feedTable = UITableView()
         feedTable.dragInteractionEnabled = true
@@ -48,6 +50,7 @@ final class FeedViewController: UIViewController {
         setTable()
         initFetchResultsController()
         feedTableView.reloadData()
+        loadPosts()
         
     }
     
@@ -90,6 +93,29 @@ final class FeedViewController: UIViewController {
             feedTableView.topAnchor.constraint(equalTo: self.view.topAnchor),
             feedTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
+        
+    }
+    
+    private func loadPosts() {
+        if let dataArray = fetchResultsController.fetchedObjects {
+            print("🐯\(dataArray.count)")
+            for item in dataArray {
+                
+                let itemPost = Post(author: item.author!, avatarImage: item.avatarImage, descriptionOfPost: item.descriptionOfPost!, image: item.image, likes: item.likes, views: item.views)
+                
+                DispatchQueue.global().async {
+                    NetworkService.loadImage(linkAvatar: itemPost.avatarImage, linkImage: itemPost.image) { avatar, image in
+                        if let avatar = avatar, let image = image {
+                                let postToPresent = PostToPresent(id: itemPost.id, author: itemPost.author, avatarImage: avatar, descriptionOfPost: itemPost.descriptionOfPost, image: image, likes: itemPost.likes, views: itemPost.likes)
+                            DispatchQueue.main.async {
+                                self.postsToPresent.append(postToPresent)
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
         
     }
     
@@ -165,22 +191,27 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-        
-        let data = fetchResultsController.object(at: indexPath)
-        
-        let dataPost = Post(author: data.author!, avatarImage: data.avatarImage, descriptionOfPost: data.descriptionOfPost!, image: data.image, likes: data.likes, views: data.views)
-        
-        DispatchQueue.global().async {
-            NetworkService.loadImage(linkAvatar: dataPost.avatarImage, linkImage: dataPost.image) { avatar, image in
-                if let avatar = avatar, let image = image {
-                    DispatchQueue.main.async {
-                        cell.post = dataPost
-                        cell.avatarImage.image = avatar
-                        cell.postImage.image = image
-                    }
-                }
-            }
-        }
+
+//        let data = fetchResultsController.object(at: indexPath)
+//
+//        let dataPost = Post(author: data.author!, avatarImage: data.avatarImage, descriptionOfPost: data.descriptionOfPost!, image: data.image, likes: data.likes, views: data.views)
+//
+//        DispatchQueue.global().async {
+//            NetworkService.loadImage(linkAvatar: dataPost.avatarImage, linkImage: dataPost.image) { avatar, image in
+//                if let avatar = avatar, let image = image {
+//                    DispatchQueue.main.async {
+//                        cell.post = dataPost
+//                        cell.avatarImage.image = avatar
+//                        cell.postImage.image = image
+//                    }
+//                }
+//            }
+//        }
+        let post = postsToPresent[indexPath.row]
+        let postToCell = Post(id: post.id, author: post.author, avatarImage: nil, descriptionOfPost: post.descriptionOfPost, image: nil, likes: post.likes, views: post.views)
+        cell.post = postToCell
+        cell.avatarImage.image = post.avatarImage
+        cell.postImage.image = post.image
         
         cell.tapAddToFavorites = { [weak self] cell in
             

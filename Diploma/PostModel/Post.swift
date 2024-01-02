@@ -28,6 +28,16 @@ public struct Post: PostProtocol {
     public var views: Int16
 }
 
+public struct PostToPresent {
+    public var id = UUID().uuidString
+    public var author: String
+    public var avatarImage: UIImage?
+    public var descriptionOfPost: String
+    public var image: UIImage?
+    public var likes: Int16
+    public var views: Int16
+}
+
 public class PostData {
 
     public var postDataArray = [PostProtocol]()
